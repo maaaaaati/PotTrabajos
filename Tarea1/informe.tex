@@ -38,18 +38,17 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Tarea 1: Prensa Hidráulica de Precisión}
+\title{Tarea 1: Circuitos Térmicos y el Convertidor Buck}
 
 
 \author{Matías~A.~Camacho,~\IEEEmembership{Estudiante,~TEC}
-        ,~Juan~P.~Elizondo,~\IEEEmembership{Estudiante,~TEC}
-        ~y~Sergio~Salazar,~\IEEEmembership{Estudiante,~TEC}
+        ~y~Juan~P.~Elizondo,~\IEEEmembership{Estudiante,~TEC}
 }
 
 
 % The paper headers
-\markboth{Análisis y Control de Sistemas Lineales, IS2026}%
-{Análisis y Control de Sistemas Lineales}
+\markboth{Procesamiento Electrónico de Potencia, IS2026}%
+{Procesamiento Electrónico de Potencia}
 
 
 % make the title area
@@ -62,7 +61,7 @@ El resumen no debe de exceder de 150 palabras y debe establecer lo que fue hecho
 
 % Se sugiere no más de cuatro palabras o frases cortas en orden alfabético, separadas por comas, que representen su reporte
 \begin{IEEEkeywords}
-Modelado, estados, Laplace, corriente, presión.
+Convertidor, ganancia, temperatura, eficiencia, potencia.
 \end{IEEEkeywords}
 
 
@@ -75,28 +74,74 @@ Modelado, estados, Laplace, corriente, presión.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Descripción dinámica}
+\section{Fundamentos Teóricos}
+Como parte de la ejecución de un buen diseño se presentan los principales fundamentos teóricos 
+que sustentan lo realizado en este trabajo.
 
-...
+\subsection{Convertidor Buck}
 
-\subsection{Circuito de control}
 
-\subsection{Solenoide}
+\subsection{Pérdidas en semiconductores de potencia}
 
-\subsection{Sistema hidráulico}
-...
-Los sistemas hidráulicos se basan en el principio de Pascal, el cual establece que un cambio de presión aplicado a un
-fluido confinado se transmite a todas partes del fluido y a las paredes del recipiente que lo contiene \cite{PhysicsBook}. Su ecuación general es la siguiente:
-\begin{equation}
-    p = \frac{F_1}{A_1} = \frac{F_2}{A_2}
-\end{equation}
-donde $p$ es la presión, $F_1$ y $F_2$ son las fuerzas aplicadas a los pistones 1 y 2 respectivamente, y $A_1$ y $A_2$ son las áreas de los pistones 1 y 2 respectivamente. Este principio permite que una pequeña fuerza aplicada a un pistón con un área pequeña pueda generar una fuerza mucho mayor en otro pistón con un área más grande, lo que es fundamental para el funcionamiento de la prensa hidráulica de precisión.
+    \subsubsection{Perdidas por conducción}
 
-Es importante también tener en cuenta que no todos los fluidos son iguales, por lo que se debe considerar la densidad del fluido a utilizar. Esto se establece a través de la siguiente ecuación:
-\begin{equation}
-    p = \rho g h
-\end{equation}
-donde $\rho$ es la densidad del fluido, $g$ es la aceleración debido a la gravedad, y $h$ es la altura del fluido.
+    \subsubsection{Perdidas por conmutación}
+    
+    \subsubsection{$R_{on}$ y su dependencia con la temperatura}
+
+
+\subsection{Modelos térmicos}
+    El comportamiento térmico de un semiconductor se puede representar
+    mediante un circuito eléctrico equivalente (circuito térmico).
+
+    Bajo esta analogía, el flujo de calor \emph{P(t)} equivale a una corriente,
+    la diferente de temperatura \emph{$\Delta T$} equivale a una 
+    diferencia de tensión, la resistencia térmica \emph{$R_{th}$} a una
+    resistencia eléctrica y la capacitancia térmica \emph{$C_{th}$} es equivalente
+    a un capacitor.
+
+    \setlength{\parskip}{1em}
+
+    \subsubsection{Modelo térmico de Foster}
+    Este es un modelo en donde su estructura se basa en una red de pares RC
+    en paralelo conectados en serie entre \emph{$T_{j}$} y \emph{$T_{case}$}. Su singularidad, 
+    los nodos de la red no tienen ningún significado físico; es decir, sus elementos RC individuales, 
+    ya no representan las secuencias de capas físicas del dispositivo \cite{schutze2008thermal}.
+
+    La impedancia térmica según este modelo, se puede ver en la siguiente ecuación. En donde
+    cada par (\emph{$r_{i}$} y \emph{$\tau_{i}$}) se puede obtener de la hoja de datos
+    del fabricante. 
+
+    \begin{equation}
+        Z_{th,jc}(t) = \sum_{i=1}^{n} r_i \left(1 - e^{-t/\tau_i} \right)
+    \end{equation}
+
+    Mientras que la temperatura de juntura se puede calcular como
+
+    \begin{equation}
+        T_j(t) = P(t) \cdot Z_{th,jc}(t) + T_{case}(t)
+    \end{equation}
+
+    Esta representación también conocida como el circuito de fracción parcial o modelo Pi. 
+    Es utilizada en hojas de datos porque los coeficientes pueden extraerse fácilmente de
+    la curva de enfriamiento medida del módulo y es de utilidad para realizar cálculos analíticos. 
+    No obstante, este es un modelo con un comportamiento de extremo a extremo, lo que quiere decir
+    que analiza la caída de temperatura entre la juntura y el encapsulado; por esto, no 
+    predice el flujo de calor en la salida y no es posible analizar el modelo del 
+    semiconductor conectado a un disipador, ya que genera un error en el momento en el que no 
+    se considera el retardo físico real de la potencia al llegar al disipador. 
+
+
+
+    \subsubsection{Modelo térmico de Cauer}
+
+
+\subsection{Cadena térmica}
+
+
+\subsection{Eficiencia y trade-offs}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Diagramas de bloques}
