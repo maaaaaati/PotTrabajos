@@ -69,7 +69,9 @@ Convertidor, ganancia, temperatura, eficiencia, potencia.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introducción}
 
-\IEEEPARstart{E}{n} esta sección se describe una introducción que le permita al lector identificar aspectos importantes para la comprensión de la lectura del documento, una visión relacionada al experimento y a los conocimientos científicos estudiados.
+\IEEEPARstart{E}{n} esta sección se describe una introducción que le permita al lector 
+identificar aspectos importantes para la comprensión de la lectura del documento, una visión 
+relacionada al experimento y a los conocimientos científicos estudiados.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,12 +95,6 @@ que sustentan lo realizado en este trabajo.
 \subsection{Modelos térmicos}
     El comportamiento térmico de un semiconductor se puede representar
     mediante un circuito eléctrico equivalente (circuito térmico).
-
-    Bajo esta analogía, el flujo de calor \emph{P(t)} equivale a una corriente,
-    la diferente de temperatura \emph{$\Delta T$} equivale a una 
-    diferencia de tensión, la resistencia térmica \emph{$R_{th}$} a una
-    resistencia eléctrica y la capacitancia térmica \emph{$C_{th}$} es equivalente
-    a un capacitor.
 
     \setlength{\parskip}{1em}
 
@@ -134,32 +130,142 @@ que sustentan lo realizado en este trabajo.
 
 
     \subsubsection{Modelo térmico de Cauer}
+    Este modelo es conocido también como el circuito de fracción continua o modelo T. 
+    A diferencia del modelo de Foster, este modelo sí refleja la configuración real del 
+    semiconductor (capacidades térmicas con resistencias térmicas intermedias) \cite{schutze2008thermal}.
 
+    \setlength{\parskip}{1em}
+
+    Su topología consiste en una red en escalera donde cada nodo intermedio sí
+    tiene significado físico y representa una interfaz real entre capas del dispositivo; 
+    de esta manera, los elementos RC individuales pueden ser asignados a las capas individuales 
+    del módulo, y los nodos de la red permiten acceder a las temperaturas internas de la 
+    secuencia de capas.
+
+    \setlength{\parskip}{1em}
+
+    Por lo anterior, estos modelos son más útiles cuando se desea modelar la cadena térmica
+    completa (juntura, encapsulado, disipador y ambiente). Se suele hacer una transformación 
+    partiendo de un modelo de Foster hacia uno de Cauer, ya que las hojas de datos casi nunca 
+    cuentan con lo necesario para partir del modelo de Cauer directamente; sin embargo, los 
+    nodos del modelo de Cauer posterior a la transformación, no tienen sentido físico. La 
+    transformación en MATLAB produce correctamente la curva \emph{$Z_{th}$}, pero sus nodos 
+    no corresponden a capas físicas reales del dispositivo \cite{schutze2008thermal}.
 
 \subsection{Cadena térmica}
+Las pérdidas por conducción y conmutación que ocurren en los dispositivos electrónicos, representan la conversión
+de energía eléctrica en energía térmica. Entonces resulta de gran importancia mantener la temperatura interna 
+del semiconductor por debajo de sus límites máximos de operación, así la diferencia de temperatura entre dos puntos 
+está relacionada por medio de la siguiente ecuación \cite{hart2011power}.
+
+\begin{equation}
+    R_{\theta} = \frac{T_1 - T_2}{P}
+\end{equation}
+
+El flujo de calor \emph{P} equivale a una corriente, la diferencia de 
+temperatura \emph{$\Delta T$} dada por \emph{$T_1 - T_2$}, equivale a una 
+diferencia de tensión y la resistencia térmica \emph{$R_{\theta}$} a una
+resistencia eléctrica. En un dispositivo real, la temperatura no sale 
+directamente hacia el aire, si no que debe de atravesar una serie 
+de capas hasta llegar al ambiente, tales como las siguientes \cite{hart2011power}.
+
+    \subsubsection{Juntura \emph{$(J)$}}
+    Es el punto interno donde ocurre la disipación, está asociado
+    a la temperatura más crítica del semiconductor que es la temperatura 
+    de juntura \emph{$T_J$}.
+
+    \subsubsection{Encapsulado \emph{$(C)$}}
+    Está asociado a la temperatura del encapsulado, \emph{$T_C$}, que 
+    es la temperatura que sale del chip y se logra medir en el exterior del dispositivo.
+
+    \subsubsection{Disipador \emph{$(S)$}}
+    Normalente suele ser un metal que ayuda a disipar el calor hacia el ambiente, 
+    asociado a la temperatura del disipador \emph{$T_S$}.
+
+    \subsubsection{Ambiente \emph{$(A)$}}
+    El aire que rodea al sistema, asociado con
+    la temperatura ambiente \emph{$T_A$}.
+
+\setlength{\parskip}{1em}
+
+De lo anterior, se deriva el modelo eléctrico equivalente que consiste en una cadena de 
+resistencias térmicas dispuestas en serie (\emph{$R_{\theta JC}$}, \emph{$R_{\theta CS}$} y \emph{$R_{\theta SA}$}).
+Y luego se tiene la ecuación principal que describe la cadena térmica.
+
+\begin{equation}
+    T_J = P \cdot (R_{\theta JC} + R_{\theta CS} + R_{\theta SA}) + T_A
+\end{equation}
+
+Esta ecuación es de suma importancia, pues permite calcular a cuánto va a llegar la temperatura de la juntura
+para cierta potencia y temperatura ambiente. 
 
 
 \subsection{Eficiencia y trade-offs}
+En el diseño de un circuito como el convertidor Buck, es importante considerar
+limitaciones de espacio, así como lograr una alta eficiencia.
+
+\setlength{\parskip}{1em}
+
+En cuanto al tamaño, es deseable que la frecuencia de operación del convertidor
+sea lo más alta posible, ya que esto permite reducir el tamaño mínimo de los componentes 
+pasivos como la bobina (para mantener una corriente continua) y el capacitor de salida 
+(para minimizar el rizado en la salida).
+
+\setlength{\parskip}{1em}
+
+La contraparte de incrementar la frecuencia de operación, es que mayores frecuencias de conmutación
+ocacionan pérdidas de potencia más considerables en los semiconductores. El aumento de estas pérdidas
+se traduce en un incremento en la liberación de calor, que puede requerir cambiar el disipador y se vean
+comprometidas las ganancias de espacio \cite{hart2011power}.
+
+\setlength{\parskip}{1em}
+
+La eficiencia de un convertidor, se determina de acuerdo con sus potencias de salida y entrada, considerando
+las pérdidas que existan en el proceso. Según la siguiente ecuación.
+
+\begin{equation}
+    \eta = \frac{P_{out}}{P_{in}} = \frac{P_{out}}{P_{out} + P_{loss}}
+\end{equation}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Diagramas de bloques}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Diseño del convertidor}
+
+\subsection{Condiciones de operación}
+
+\subsection{Selección de componentes}
+
+\subsection{Modelado de pérdidas}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Desarrollo del espacio de estados}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Modelado térmico}
+
+\subsection{Circuito térmico del sistema}
+
+\subsection{Modelo Foster del MOSFET}
+
+\subsection{Conversión a modelo Cauer del MOSFET}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Desarrollo de la función de transferencia}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Validación térmica}
+
+\subsection{Simulaciones térmicas}
+
+\subsection{Cumplimiento de límites térmicos}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Construcción del modelo simulado}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Pérdidas y eficiencia}
+
+
 
 
 

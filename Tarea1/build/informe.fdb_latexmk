@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/informe"] 1774904812.01187 "build/informe.bcf" "build/informe.bbl" "build/informe" 1774906656.95652 0
-  "build/informe.bcf" 1774906656 107832 87dffdb5bcc2283129f27b2d3a2622c9 "pdflatex"
-  "literatura.bib" 1774904810 501 173e71dc607b13d5114fe48d6677eab7 ""
+["biber build/informe"] 1774978003.94098 "build/informe.bcf" "build/informe.bbl" "build/informe" 1774978148.51445 0
+  "build/informe.bcf" 1774978147 108182 6936479b15f5be83cdc963b10e854b56 "pdflatex"
+  "literatura.bib" 1774970720 484 dc66151f1e4b3951ca3f52c52876723d ""
   (generated)
   "build/informe.bbl"
   "build/informe.blg"
   (rewritten before read)
-["pdflatex"] 1774906653.82189 "c:/LaTex/Tra_Potencia/PotTrabajos/Tarea1/informe.tex" "build/informe.pdf" "informe" 1774906656.95755 0
+["pdflatex"] 1774978145.68447 "c:/LaTex/Tra_Potencia/PotTrabajos/Tarea1/informe.tex" "build/informe.pdf" "informe" 1774978148.51539 0
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1773891438 84158 d77284a6843bde1e4b9764f09fb2e89e ""
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1773891445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1773891449 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -221,12 +221,12 @@
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/vmargin/vmargin.sty" 1090548324 7055 5eae49c3f07fead60d92def0a4f5c30f ""
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "build/informe.aux" 1774906656 3545 918832861ea28a3fe1cd6821dd0edcc8 "pdflatex"
-  "build/informe.bbl" 1774904815 1882 d348803ad0fd1dce6e603a9e7e578ee5 "biber build/informe"
-  "build/informe.out" 1774906656 3962 a411e33ae75be99562cdd442c9d07d8c "pdflatex"
-  "build/informe.run.xml" 1774906656 2434 6f2c741eea78e69b8ddf003fef666404 "pdflatex"
-  "c:/LaTex/Tra_Potencia/PotTrabajos/Tarea1/informe.tex" 1774906646 8382 2f641c4f81197b3425c6bdc8e830c7a9 ""
-  "informe.tex" 1774906646 8382 2f641c4f81197b3425c6bdc8e830c7a9 ""
+  "build/informe.aux" 1774978147 5687 94817b0afd49e0998d50ee0ac58056f7 "pdflatex"
+  "build/informe.bbl" 1774978008 3065 292312394c25aa51a1979cae29c7c9e6 "biber build/informe"
+  "build/informe.out" 1774978147 5861 0ab4b5238471f6293f81da527015290e "pdflatex"
+  "build/informe.run.xml" 1774978148 2434 6f2c741eea78e69b8ddf003fef666404 "pdflatex"
+  "c:/LaTex/Tra_Potencia/PotTrabajos/Tarea1/informe.tex" 1774978142 13106 d42e410869d2dcb3c74ea3e914b4c119 ""
+  "informe.tex" 1774978142 13106 d42e410869d2dcb3c74ea3e914b4c119 ""
   "instructivo.sty" 1774899685 9675 6e73d3f6dfa117e9424bf62a4f29314d ""
   (generated)
   "build/informe.aux"
