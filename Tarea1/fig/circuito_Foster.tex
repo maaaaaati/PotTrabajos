@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}
+
+% Línea principal con resistencias
+\draw
+(0,0) node[left]{$T_j$}
+to[short, o-] (1,0)
+to[R] (3,0)
+to[R] (5,0)
+to[R] (7,0)
+to[R] (9,0)
+to[short] (9,0) node[right]{$T_{case}$};
+
+% Capacitores en paralelo (ramas independientes)
+\draw (1,-2) to[C] (3,-2);
+\draw (3,-2) to[C] (5,-2);
+\draw (5,-2) to[C] (7,-2);
+\draw (7,-2) to[C] (9,-2);
+
+% Conexiones entre componentes
+\draw (1,0) to[short] (1,-2);
+\draw (3,0) to[short] (3,-2);
+\draw (5,0) to[short] (5,-2);
+\draw (7,0) to[short] (7,-2);
+\draw (9,0) to[short] (9,-2);
+
+% Conexión a T_case
+\draw (9,-2) to[short] (9,-2.5)
+node[ground]{}
+node[below]{};
+
+\end{circuitikz}
+
+\end{document}

@@ -26,6 +26,13 @@
 \usepackage[natbib=true,style=trad-unsrt,backend=biber]{biblatex}
 \addbibresource{literatura.bib}
 
+\usepackage{standalone}
+\usepackage[americanresistors,americaninductors,RPvoltages]{circuitikz}
+
+\usepackage{float}
+\usepackage{graphicx}
+
+
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
@@ -100,9 +107,16 @@ que sustentan lo realizado en este trabajo.
 
     \subsubsection{Modelo térmico de Foster}
     Este es un modelo en donde su estructura se basa en una red de pares RC
-    en paralelo conectados en serie entre \emph{$T_{j}$} y \emph{$T_{case}$}. Su singularidad, 
-    los nodos de la red no tienen ningún significado físico; es decir, sus elementos RC individuales, 
+    en paralelo conectados en serie entre \emph{$T_{j}$} y \emph{$T_{case}$}, según se muestra en la Figura \ref{fig:circuito_foster}. 
+    Su singularidad, los nodos de la red no tienen ningún significado físico; es decir, sus elementos RC individuales, 
     ya no representan las secuencias de capas físicas del dispositivo \cite{schutze2008thermal}.
+
+    \begin{figure}[H]
+        \centering
+        \includestandalone[width=\columnwidth]{circuito_Foster}
+        \caption{Topología del modelo Foster}
+    \label{fig:circuito_foster}
+    \end{figure}
 
     La impedancia térmica según este modelo, se puede ver en la siguiente ecuación. En donde
     cada par (\emph{$r_{i}$} y \emph{$\tau_{i}$}) se puede obtener de la hoja de datos
@@ -137,12 +151,17 @@ que sustentan lo realizado en este trabajo.
     \setlength{\parskip}{1em}
 
     Su topología consiste en una red en escalera donde cada nodo intermedio sí
-    tiene significado físico y representa una interfaz real entre capas del dispositivo; 
-    de esta manera, los elementos RC individuales pueden ser asignados a las capas individuales 
-    del módulo, y los nodos de la red permiten acceder a las temperaturas internas de la 
-    secuencia de capas.
+    tiene significado físico y representa una interfaz real entre capas del dispositivo, tal como 
+    se muestra en la Figura \ref{fig:circuito_cauer}; de esta manera, los elementos RC individuales 
+    pueden ser asignados a las capas individuales del módulo, y los nodos de la red permiten acceder 
+    a las temperaturas internas de la secuencia de capas.
 
-    \setlength{\parskip}{1em}
+    \begin{figure}[H]
+        \centering
+        \includestandalone[width=\columnwidth]{circuito_Cauer}
+        \caption{Topología del modelo Cauer}
+    \label{fig:circuito_cauer}
+    \end{figure}
 
     Por lo anterior, estos modelos son más útiles cuando se desea modelar la cadena térmica
     completa (juntura, encapsulado, disipador y ambiente). Se suele hacer una transformación 
