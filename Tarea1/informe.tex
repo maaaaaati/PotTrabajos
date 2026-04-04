@@ -252,8 +252,24 @@ las pérdidas que existan en el proceso. Según la siguiente ecuación.
 \section{Diseño del convertidor}
 
 \subsection{Condiciones de operación}
+Para este convertidor, se solicita que la tensión de entrada sea \emph{$V_{in} = 48~\mathrm{V}$}, y la tensión 
+de salida \emph{$V_{out} = 24~\mathrm{V}$}, con esto la relación de transformación es de 0.5.
 
-\subsection{Selección de componentes}
+\begin{equation}
+    D = \frac{V_{out}}{V_{in}} * 100\% = 50\%
+\end{equation}
+
+Además, se solicita que la potencia nominal de salida sea \emph{$P_{out} = 200~\mathrm{W}$}. Lo cual establece una
+corriente por la salida de \emph{$8.33~\mathrm{A}$} aproximadamente, así como una carga resistiva 
+equivalente de aproximadamente \emph{$2.88~\Omega$}, según la siguiente ecuación.
+
+\begin{equation}
+    R_{load} = \frac{V_{out}^2}{P_{out}} = 2.88~\Omega
+\end{equation}
+
+\subsection{Opciones para el MOSFET}
+
+\subsection{Opciones para el diodo}
 
 \subsection{Modelado de pérdidas}
 
