@@ -31,6 +31,10 @@
 
 \usepackage{float}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage{hyperref}
 
 
 % correct bad hyphenation here
@@ -260,14 +264,68 @@ de salida \emph{$V_{out} = 24~\mathrm{V}$}, con esto la relación de transformac
 \end{equation}
 
 Además, se solicita que la potencia nominal de salida sea \emph{$P_{out} = 200~\mathrm{W}$}. Lo cual establece una
-corriente por la salida de \emph{$8.33~\mathrm{A}$} aproximadamente, así como una carga resistiva 
+corriente nominal por la salida de \emph{$8.33~\mathrm{A}$} aproximadamente, así como una carga resistiva 
 equivalente de aproximadamente \emph{$2.88~\Omega$}, según la siguiente ecuación.
 
 \begin{equation}
     R_{load} = \frac{V_{out}^2}{P_{out}} = 2.88~\Omega
 \end{equation}
 
+Otro aspecto a tomar en consideración, es la tensión \emph{$V_{DS}$} que va a tener que soportar el MOSFET para esta
+aplicación. Que para efectos del convertidor Buck, la tensión \emph{$V_{DS}$} durante el ciclo de apagado, 
+corresponde a la tensión de entrada al circuito, unos \emph{$48~\mathrm{V}$} en este caso.
+
 \subsection{Opciones para el MOSFET}
+
+Para el transistor MOSFET, se seleccionaron las siguientes tres alternativas a comparar. El trasistor
+IRF540N \cite{IRF540N_ds}, el IRFS7730 \cite{IRFS7730_ds} y el IRF3007 \cite{IRF3007_ds}. A continuación, 
+se muestra su información más relevante según sus hojas de datos. 
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabularx}{\columnwidth}{
+        >{\hsize=1.3\hsize}X 
+        >{\hsize=0.70\hsize}X 
+        >{\hsize=0.75\hsize}X 
+        >{\hsize=0.75\hsize}X
+    }
+        \toprule
+        Parámetro                                   & IRF540N & IRFS7730 & IRF3007 \\
+        \midrule
+        $V_{DS,max}~\mathrm{[V]}$                   & $100$   & $75$     & $75$    \\
+        $I_{D}~@~25^\circ\mathrm{C}~\mathrm{[A]}$   & $33$    & $195$    & $62$    \\
+        $R_{DS(on), max}~\mathrm{[m\Omega]}$        & $44$    & $2.6$    & $12.6$  \\
+        $Q_{g}~\mathrm{[nC]}$                       & $71$    & $271$    & $89$    \\
+        $R_{\theta JC}~[^\circ\mathrm{C/W}]$        & $1.15$  & $0.40$   & $1.25$  \\
+        $P_{D, max}~\mathrm{[W]}$                   & $130$   & $375$    & $120$   \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Características de los transistores MOSFET}
+    \label{tab:mosfet_comparison}
+\end{table}
+
+De la tabla \ref{tab:mosfet_comparison}, se observa que los tres transistores cumplen con los requisitos de tensión y corriente
+analizados en la sección anterior. No obstante el IRF540N tiene una resistencia de conducción mucho más alta que los otros 
+dos, esto es algo bastante relevante que ubica a este transistor en una posición menos llamativa para ser utilizado, puesto que 
+presentaría pérdidas por conducción mayores, a pesar de que su tensión $V_{DS,max}$ es la más alta.
+
+\setlength{\parskip}{1em}
+
+Por otra parte, los transistores IRFS7730 y el IRF3007 tienen una resistencia de conducción mucho más baja, lo que los convierte
+en una mejor alternativa para reducir las pérdidas por conducción. Hay que considerar que el RFS7730 tiene un valor de $Q_{g}$ tres 
+veces mayor en comparación con el IRF3007, con lo que en primera instancia tendría mayores pérdidas por conmutación. Sin embargo, se sabe
+que las pérdidas por conmutación son menos relevantes y pueden ser controladas al variar la frecuencia de operación; además, el 
+RFS7730 tiene una resistencia térmica de juntura a carcasa mucho menor, lo que le permite disipar mejor el calor generado 
+por las pérdidas.
+
+\setlength{\parskip}{1em}
+
+En base a lo mencionado, se elige al IRFS7730 como el transistor a utilizar para el diseño del convertidor Buck, ya que 
+es el que presenta una mejor relación de características. Queda pendiente en las próximas secciones, ajustar el valor de la frecuencia
+tal que se logre un equilibrio entre las pérdidas, la eficiencia y el tamaño del circuito. 
+
+
 
 \subsection{Opciones para el diodo}
 

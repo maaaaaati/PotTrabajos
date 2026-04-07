@@ -80,6 +80,39 @@
       \field{title}{Power Electronics}
       \field{year}{2011}
     \endentry
+    \entry{IRF540N_ds}{manual}{}{}
+      \list{organization}{1}{%
+        {Infineon Technologies}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible: \href{https://www.infineon.com/assets/row/public/documents/24/49/infineon-irf540n-datasheet-en.pdf}}
+      \field{title}{IRF540N Power MOSFET Datasheet}
+      \field{year}{2020}
+    \endentry
+    \entry{IRFS7730_ds}{manual}{}{}
+      \list{organization}{1}{%
+        {Infineon Technologies}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible: \href{https://www.infineon.com/assets/row/public/documents/24/49/infineon-irfs7730-datasheet-en.pdf}}
+      \field{title}{IRFS7730PbF MOSFET Datasheet}
+      \field{year}{2020}
+    \endentry
+    \entry{IRF3007_ds}{manual}{}{}
+      \list{organization}{1}{%
+        {Vishay Siliconix}%
+      }
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{note}{Disponible: \href{https://www.infineon.com/assets/row/public/documents/24/49/infineon-irf3007s-datasheet-en.pdf}}
+      \field{title}{IRF3007SPbF MOSFET Datasheet}
+      \field{year}{2021}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

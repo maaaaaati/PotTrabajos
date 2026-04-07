@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  6 APR 2026 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  6 APR 2026 18:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -818,248 +818,7 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \symsymbolsC=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
 (Font)                  U/txsyc/m/n --> U/txsyc/bx/n on input line 136.
-) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
-Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count380
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-\c@tabx@nest=\count381
-\c@listtotal=\count382
-\c@listcount=\count383
-\c@liststart=\count384
-\c@liststop=\count385
-\c@citecount=\count386
-\c@citetotal=\count387
-\c@multicitecount=\count388
-\c@multicitetotal=\count389
-\c@instcount=\count390
-\c@maxnames=\count391
-\c@minnames=\count392
-\c@maxitems=\count393
-\c@minitems=\count394
-\c@citecounter=\count395
-\c@maxcitecounter=\count396
-\c@savedcitecounter=\count397
-\c@uniquelist=\count398
-\c@uniquename=\count399
-\c@refsection=\count400
-\c@refsegment=\count401
-\c@maxextratitle=\count402
-\c@maxextratitleyear=\count403
-\c@maxextraname=\count404
-\c@maxextradate=\count405
-\c@maxextraalpha=\count406
-\c@abbrvpenalty=\count407
-\c@highnamepenalty=\count408
-\c@lownamepenalty=\count409
-\c@maxparens=\count410
-\c@parenlevel=\count411
-\blx@tempcnta=\count412
-\blx@tempcntb=\count413
-\blx@tempcntc=\count414
-\c@blx@maxsection=\count415
-\blx@maxsegment@0=\count416
-\blx@notetype=\count417
-\blx@parenlevel@text=\count418
-\blx@parenlevel@foot=\count419
-\blx@sectionciteorder@0=\count420
-\blx@sectionciteorderinternal@0=\count421
-\blx@entrysetcounter=\count422
-\blx@biblioinstance=\count423
-\labelnumberwidth=\skip79
-\labelalphawidth=\skip80
-\biblabelsep=\skip81
-\bibitemsep=\skip82
-\bibnamesep=\skip83
-\bibinitsep=\skip84
-\bibparsep=\skip85
-\bibhang=\skip86
-\blx@bcfin=\read4
-\blx@bcfout=\write4
-\blx@langwohyphens=\language80
-\c@mincomprange=\count424
-\c@maxcomprange=\count425
-\c@mincompwidth=\count426
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
-File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
-)
-Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'trad-unsrt.dbx' not found.
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count427
-\c@savedafterword=\count428
-\c@annotator=\count429
-\c@savedannotator=\count430
-\c@author=\count431
-\c@savedauthor=\count432
-\c@bookauthor=\count433
-\c@savedbookauthor=\count434
-\c@commentator=\count435
-\c@savedcommentator=\count436
-\c@editor=\count437
-\c@savededitor=\count438
-\c@editora=\count439
-\c@savededitora=\count440
-\c@editorb=\count441
-\c@savededitorb=\count442
-\c@editorc=\count443
-\c@savededitorc=\count444
-\c@foreword=\count445
-\c@savedforeword=\count446
-\c@holder=\count447
-\c@savedholder=\count448
-\c@introduction=\count449
-\c@savedintroduction=\count450
-\c@namea=\count451
-\c@savednamea=\count452
-\c@nameb=\count453
-\c@savednameb=\count454
-\c@namec=\count455
-\c@savednamec=\count456
-\c@translator=\count457
-\c@savedtranslator=\count458
-\c@shortauthor=\count459
-\c@savedshortauthor=\count460
-\c@shorteditor=\count461
-\c@savedshorteditor=\count462
-\c@labelname=\count463
-\c@savedlabelname=\count464
-\c@institution=\count465
-\c@savedinstitution=\count466
-\c@lista=\count467
-\c@savedlista=\count468
-\c@listb=\count469
-\c@savedlistb=\count470
-\c@listc=\count471
-\c@savedlistc=\count472
-\c@listd=\count473
-\c@savedlistd=\count474
-\c@liste=\count475
-\c@savedliste=\count476
-\c@listf=\count477
-\c@savedlistf=\count478
-\c@location=\count479
-\c@savedlocation=\count480
-\c@organization=\count481
-\c@savedorganization=\count482
-\c@origlocation=\count483
-\c@savedoriglocation=\count484
-\c@origpublisher=\count485
-\c@savedorigpublisher=\count486
-\c@publisher=\count487
-\c@savedpublisher=\count488
-\c@language=\count489
-\c@savedlanguage=\count490
-\c@origlanguage=\count491
-\c@savedoriglanguage=\count492
-\c@pageref=\count493
-\c@savedpageref=\count494
-\shorthandwidth=\skip87
-\shortjournalwidth=\skip88
-\shortserieswidth=\skip89
-\shorttitlewidth=\skip90
-\shortauthorwidth=\skip91
-\shorteditorwidth=\skip92
-\locallabelnumberwidth=\skip93
-\locallabelalphawidth=\skip94
-\localshorthandwidth=\skip95
-\localshortjournalwidth=\skip96
-\localshortserieswidth=\skip97
-\localshorttitlewidth=\skip98
-\localshortauthorwidth=\skip99
-\localshorteditorwidth=\skip100
-Package biblatex Info: Trying to load compatibility code...
-Package biblatex Info: ... file 'blx-compat.def' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
-File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-)
-Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
-File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count495
-\c@textcitetotal=\count496
-\c@textcitemaxnames=\count497
-\c@biburlbigbreakpenalty=\count498
-\c@biburlbreakpenalty=\count499
-\c@biburlnumpenalty=\count500
-\c@biburlucpenalty=\count501
-\c@biburllcpenalty=\count502
-\biburlbigskip=\muskip19
-\biburlnumskip=\muskip20
-\biburlucskip=\muskip21
-\biburllcskip=\muskip22
-\c@smartand=\count503
-)
-Package biblatex Info: Trying to load natbib compatibility...
-Package biblatex Info: ... file 'blx-natbib.def' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-natbib.def
-File: blx-natbib.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
-)
-Package biblatex Info: Trying to load bibliography style 'trad-unsrt'...
-Package biblatex Info: ... file 'trad-unsrt.bbx' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-trad\trad-unsrt.bbx
-File: trad-unsrt.bbx 2021/03/06 v0.5 biblatex-trad unsrt bibliography style
-Package biblatex Info: Trying to load bibliography style 'trad-standard'...
-Package biblatex Info: ... file 'trad-standard.bbx' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-trad\trad-standard.bbx
-File: trad-standard.bbx 2021/03/06 v0.5 biblatex-trad base bibliography style
-Package biblatex Info: Trying to load bibliography style 'standard'...
-Package biblatex Info: ... file 'standard.bbx' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
-File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count504
-\c@bbx:relatedtotal=\count505
-)))
-Package biblatex Info: Trying to load citation style 'trad-unsrt'...
-Package biblatex Info: ... file 'trad-unsrt.cbx' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-trad\trad-unsrt.cbx
-File: trad-unsrt.bbx 2021/03/06 v0.5 biblatex-trad unsrt citation style
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
-File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\supercite'.
-Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\smartcites'.
-))
-Package biblatex Info: Trying to load configuration file...
-Package biblatex Info: ... file 'biblatex.cfg' found.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
-File: biblatex.cfg 
-)
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Document encoding is UTF8 ....
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2026-01-19 L3 programming layer (loader) 
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count506
-))
-Package biblatex Info: ... and expl3
-(biblatex)             2026-01-19 L3 programming layer (loader) 
-(biblatex)             is new enough (at least 2020/04/06),
-(biblatex)             setting 'casechanger=expl3'.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
-Package: xparse 2025-10-09 L3 Experimental document command parser
-)
-Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
-)) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/standalone\standalone.sty
+) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/standalone\standalone.sty
 Package: standalone 2025/02/22 v1.5a Package to include TeX sub-files with preambles
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
@@ -1070,7 +829,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks63
 \XKV@tempa@toks=\toks64
 )
-\XKV@depth=\count507
+\XKV@depth=\count380
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/currfile\currfile.sty
 Package: currfile 2024/03/14 v1.0 Provides the file path elements of the current input file
@@ -1079,7 +838,7 @@ Package: filehook 2022/10/25 v0.8b Hooks for input files
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/filehook\filehook-2020.sty
 Package: filehook-2020 2022/10/25 v0.8b Hooks for input files
 ))
-\c@currfiledepth=\count508
+\c@currfiledepth=\count381
 ) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/gincltex\gincltex.sty (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/svn-prov\svn-prov.sty
 Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
 )
@@ -1112,11 +871,11 @@ File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 \adjbox@ptotalheight=\dimen363
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count509
+\c@checkoddpage=\count382
 ) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box126
-\sift@deathcycles=\count510
+\sift@deathcycles=\count383
 \@vwid@loff=\dimen364
 \@vwid@roff=\dimen365
 )
@@ -1152,9 +911,9 @@ File: pgflibrarycurvilinear.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 \pgf@arrows@the@rigidity=\dimen376
 )) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfpu.code.tex (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex)) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirc.defines.tex
-\pgf@circ@count@a=\count511
-\pgf@circ@count@b=\count512
-\pgf@circ@count@c=\count513
+\pgf@circ@count@a=\count384
+\pgf@circ@count@b=\count385
+\pgf@circ@count@c=\count386
 \pgf@circ@res@up=\dimen377
 \pgf@circ@res@down=\dimen378
 \pgf@circ@res@zero=\dimen379
@@ -1169,106 +928,103 @@ File: pgflibrarycurvilinear.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircutils.tex
 \ctikz@scratchbox=\box128
 ) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircpath.tex
-\ctikz@vif@count=\count514
+\ctikz@vif@count=\count387
 ) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircshapes.tex) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircmonopoles.tex) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircbipoles.tex) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirctripoles.tex
-\pgf@circ@res@count=\count515
+\pgf@circ@res@count=\count388
 ) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircquadpoles.tex) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircmultipoles.tex) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirclabel.tex) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircvoltage.tex
 \pgfcirc@labelshift=\dimen388
 ) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcirccurrent.tex) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/generic/circuitikz\pgfcircflow.tex)) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count516
+\c@float@type=\count389
 \float@exts=\toks65
 \float@box=\box129
 \@float@everytoks=\toks66
 \@floatcapt=\box130
 )
-
-Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
-(biblatex)                Loading 'csquotes' recommended.
-
-\@quotelevel=\count517
-\@quotereset=\count518
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 44.
-(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 42.
+ (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-) (c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.aux
-LaTeX Info: Redefining \. on input line 19.
-LaTeX Info: Redefining \% on input line 19.
+) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count390
+) (informe.aux
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 19.
+(babel)             Reported on input line 16.
 )
 \openout1 = `informe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/txsyc/m/n on input line 44.
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/txsyc/m/n on input line 42.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 42.
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <5> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <7> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <8> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <11> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <11> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <17> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <20> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <20> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <24> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <24> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 44.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 42.
 
 -- Lines per column: 57 (approximate, difference = 6.99286pt).
-LaTeX Info: Redefining \. on input line 44.
-LaTeX Info: Redefining \% on input line 44.
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 44.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 42.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1276,16 +1032,16 @@ Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count519
+\scratchcounter=\count391
 \scratchdimen=\dimen389
 \scratchbox=\box131
-\nofMPsegments=\count520
-\nofMParguments=\count521
+\nofMPsegments=\count392
+\nofMParguments=\count393
 \everyMPshowfont=\toks67
-\MPscratchCnt=\count522
+\MPscratchCnt=\count394
 \MPscratchDim=\dimen390
-\MPnumerator=\count523
-\makeMPintoPDFobject=\count524
+\MPnumerator=\count395
+\makeMPintoPDFobject=\count396
 \everyMPtoPDFconversion=\toks68
 ) (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1293,10 +1049,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 44.
- (c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.out) (c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.out)
-\@outlinefile=\write5
-\openout5 = `informe.out'.
+Package hyperref Info: Link coloring OFF on input line 42.
+ (informe.out) (informe.out)
+\@outlinefile=\write4
+\openout4 = `informe.out'.
 
 
 *geometry* driver: auto-detecting
@@ -1333,48 +1089,33 @@ Package hyperref Info: Link coloring OFF on input line 44.
 * \@reversemargintrue
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package biblatex Info: Trying to load language 'spanish'...
-Package biblatex Info: ... file 'spanish.lbx' found.
-(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
-File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
-)
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `informe.bcf'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'informe.bbl' found.
- (c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.bbl)
-Package biblatex Info: Reference section=0 on input line 44.
-Package biblatex Info: Reference segment=0 on input line 44.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 106.
- (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 104.
+(C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 106.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 104.
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 106.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 104.
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+trsy on input line 106.
+LaTeX Font Info:    Trying to load font information for U+trsy on input line 104.
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/trsym\utrsy.fd
 File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 106.
+(hyperref)                removing `math shift' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 106.
+(hyperref)                removing `subscript' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 106.
+(hyperref)                removing `math shift' on input line 104.
 
 (fig/circuito_Foster.tex)
 File: ./fig/circuito_Foster.tex Graphic file (type tex)
@@ -1389,88 +1130,102 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 196.
+(hyperref)                removing `math shift' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 196.
+(hyperref)                removing `math shift' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 201.
+(hyperref)                removing `math shift' on input line 199.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 201.
+(hyperref)                removing `math shift' on input line 199.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 205.
+(hyperref)                removing `math shift' on input line 203.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 205.
+(hyperref)                removing `math shift' on input line 203.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
+(hyperref)                removing `math shift' on input line 207.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
+(hyperref)                removing `math shift' on input line 207.
 
 [2]
-Underfull \hbox (badness 1735) in paragraph at lines 280--283
+
+LaTeX Warning: Reference `IRF540N_ds' on page 3 undefined on input line 279.
+
+
+LaTeX Warning: Reference `IRFS7730_ds' on page 3 undefined on input line 279.
+
+
+LaTeX Warning: Reference `IRF3007_ds' on page 3 undefined on input line 279.
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 278--281
 \T1/phv/m/n/10 guien-tes tres al-ter-na-ti-vas a com-pa-rar. El trasis-tor
  []
 
 
-Overfull \hbox (1.08292pt too wide) in paragraph at lines 303--303
+Overfull \hbox (1.08292pt too wide) in paragraph at lines 301--301
 []|$\OML/cmm/m/it/8 R[] []$| 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 303--303
+Underfull \hbox (badness 10000) in alignment at lines 301--301
 [][][][] 
  []
 
-[3]
-Underfull \hbox (badness 1448) in paragraph at lines 393--395
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ (informe.bbl)
+Underfull \hbox (badness 1448) in paragraph at lines 373--375
 \T1/phv/b/n/8 Juan P. Eli-zon-do \T1/phv/m/n/8 Reali-zó sus es-tu-dios de se-cun-da-ria en el
  []
 
-\tf@thm=\write6
-\openout6 = `informe.thm'.
+[3]
+\tf@thm=\write5
+\openout5 = `informe.thm'.
 
-[4
+ [4
 
-] (c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.aux
-LaTeX Info: Redefining \sptext on input line 19.
-LaTeX Info: Redefining \. on input line 19.
-LaTeX Info: Redefining \% on input line 19.
+] (informe.aux
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
 )
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: 13FA7B20731C6E4C85B852699582D6BF;6033.
-Package logreq Info: Writing requests to 'informe.run.xml'.
-\openout1 = `informe.run.xml'.
 
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `informe.out' has not changed.
+(rerunfilecheck)             Checksum: 3360788579E0AA2262311BA763EC302A;6133.
  ) 
 Here is how much of TeX's memory you used:
- 58789 strings out of 467867
- 1380273 string characters out of 5418334
- 2432119 words of memory out of 5000000
- 86932 multiletter control sequences out of 15000+600000
- 763753 words of font info for 185 fonts, out of 8000000 for 9000
+ 51428 strings out of 467867
+ 1229327 string characters out of 5418334
+ 1869831 words of memory out of 5000000
+ 79631 multiletter control sequences out of 15000+600000
+ 766067 words of font info for 187 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 99i,13n,108p,1241b,2012s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,108p,909b,1192s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.pdf (4 pages, 223341 bytes).
+Output written on informe.pdf (4 pages, 218829 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
