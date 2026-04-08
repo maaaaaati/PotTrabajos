@@ -102,16 +102,27 @@
       \field{title}{IRFS7730PbF MOSFET Datasheet}
       \field{year}{2020}
     \endentry
-    \entry{IRF3007_ds}{manual}{}{}
-      \list{organization}{1}{%
-        {Vishay Siliconix}%
+    \entry{CSD19503KCS_ds}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=67e54b1ee931f3f4bddfefa5fbde5fd8}{%
+           family={{Texas Instruments}},
+           familyi={T\bibinitperiod}}}%
       }
+      \strng{namehash}{67e54b1ee931f3f4bddfefa5fbde5fd8}
+      \strng{fullhash}{67e54b1ee931f3f4bddfefa5fbde5fd8}
+      \strng{fullhashraw}{67e54b1ee931f3f4bddfefa5fbde5fd8}
+      \strng{bibnamehash}{67e54b1ee931f3f4bddfefa5fbde5fd8}
+      \strng{authorbibnamehash}{67e54b1ee931f3f4bddfefa5fbde5fd8}
+      \strng{authornamehash}{67e54b1ee931f3f4bddfefa5fbde5fd8}
+      \strng{authorfullhash}{67e54b1ee931f3f4bddfefa5fbde5fd8}
+      \strng{authorfullhashraw}{67e54b1ee931f3f4bddfefa5fbde5fd8}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Disponible: \href{https://www.infineon.com/assets/row/public/documents/24/49/infineon-irf3007s-datasheet-en.pdf}}
-      \field{title}{IRF3007SPbF MOSFET Datasheet}
-      \field{year}{2021}
+      \field{note}{Disponible: \url{https://www.ti.com/lit/ds/symlink/csd19503kcs.pdf}}
+      \field{title}{CSD19503KCS 80-V N-Channel NexFET Power MOSFET Datasheet (Rev. B)}
+      \field{year}{2024}
     \endentry
   \enddatalist
 \endrefsection

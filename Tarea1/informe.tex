@@ -52,8 +52,9 @@
 \title{Tarea 1: Circuitos Térmicos y el Convertidor Buck}
 
 
-\author{Matías~A.~Camacho,~\IEEEmembership{Estudiante,~TEC}
-        ~y~Juan~P.~Elizondo,~\IEEEmembership{Estudiante,~TEC}
+\author{Matías~A.~Camacho,~\IEEEmembership{estudiante,~TEC}
+        ,~Juan~P.~Elizondo,~\IEEEmembership{estudiante,~TEC}
+        ~y~Fernando~J.~Rodriguez,~\IEEEmembership{estudiante,~TEC}
 }
 
 
@@ -278,7 +279,7 @@ corresponde a la tensión de entrada al circuito, unos \emph{$48~\mathrm{V}$} en
 \subsection{Opciones para el MOSFET}
 
 Para el transistor MOSFET, se seleccionaron las siguientes tres alternativas a comparar. El trasistor
-IRF540N \cite{IRF540N_ds}, el IRFS7730 \cite{IRFS7730_ds} y el IRF3007 \cite{IRF3007_ds}. A continuación, 
+IRF540N \cite{IRF540N_ds}, el IRFS7730 \cite{IRFS7730_ds} y el CSD19503 \cite{CSD19503KCS_ds}. A continuación, 
 se muestra su información más relevante según sus hojas de datos. 
 
 \begin{table}[H]
@@ -291,14 +292,17 @@ se muestra su información más relevante según sus hojas de datos.
         >{\hsize=0.75\hsize}X
     }
         \toprule
-        Parámetro                                   & IRF540N & IRFS7730 & IRF3007 \\
+        Parámetro                                   & IRF540N & IRFS7730 & CSD19503 \\
         \midrule
-        $V_{DS,max}~\mathrm{[V]}$                   & $100$   & $75$     & $75$    \\
-        $I_{D}~@~25^\circ\mathrm{C}~\mathrm{[A]}$   & $33$    & $195$    & $62$    \\
-        $R_{DS(on), max}~\mathrm{[m\Omega]}$        & $44$    & $2.6$    & $12.6$  \\
-        $Q_{g}~\mathrm{[nC]}$                       & $71$    & $271$    & $89$    \\
-        $R_{\theta JC}~[^\circ\mathrm{C/W}]$        & $1.15$  & $0.40$   & $1.25$  \\
-        $P_{D, max}~\mathrm{[W]}$                   & $130$   & $375$    & $120$   \\
+        $V_{DS,max}~\mathrm{[V]}$                   & $100$   & $75$     & $80$     \\
+        $I_{D}~@~25^\circ\mathrm{C}~\mathrm{[A]}$   & $33$    & $195$    & $100$    \\
+        $R_{DS(on), max}~\mathrm{[m\Omega]}$        & $44$    & $2.6$    & $7.6$    \\
+        $Q_{g}~\mathrm{[nC]}$                       & $71$    & $271$    & $28$     \\
+        $R_{\theta JC}~[^\circ\mathrm{C/W}]$        & $1.15$  & $0.40$   & $0.8$    \\
+        $P_{D, max}~\mathrm{[W]}$                   & $130$   & $375$    & $188$    \\
+        $t_{r}~\mathrm{[ns]}$                       & $35$    & $120$    & $3$      \\
+        $t_{f}~\mathrm{[ns]}$                       & $35$    & $115$    & $2$      \\
+
         \bottomrule
     \end{tabularx}
     \caption{Características de los transistores MOSFET}
@@ -312,16 +316,16 @@ presentaría pérdidas por conducción mayores, a pesar de que su tensión $V_{D
 
 \setlength{\parskip}{1em}
 
-Por otra parte, los transistores IRFS7730 y el IRF3007 tienen una resistencia de conducción mucho más baja, lo que los convierte
-en una mejor alternativa para reducir las pérdidas por conducción. Hay que considerar que el RFS7730 tiene un valor de $Q_{g}$ tres 
-veces mayor en comparación con el IRF3007, con lo que en primera instancia tendría mayores pérdidas por conmutación. Sin embargo, se sabe
-que las pérdidas por conmutación son menos relevantes y pueden ser controladas al variar la frecuencia de operación; además, el 
-RFS7730 tiene una resistencia térmica de juntura a carcasa mucho menor, lo que le permite disipar mejor el calor generado 
-por las pérdidas.
+Por otra parte, los transistores IRFS7730 y el CSD19503 tienen una resistencia de conducción mucho más baja, lo que los convierte
+en una mejor alternativa para reducir las pérdidas por conducción. Hay que considerar que el IRFS7730 tiene un valor de $Q_{g}$ casi
+10 veces mayor que el CSD19503 lo que equivale a mayores pérdidas por conmutación (a esto se suman sus tiempos de conmutación $t_{r}$ y $t_{f}$). 
+Se sabe que las pérdidas por conducción son generalmente más significativas que las pérdidas por conmutación; no obstante, considerando 
+que la diferencia en el IRFS7730 es bastante más alta se podría apostar por un balance entre ambos valores. Además, de que el transistor 
+CSD19503 ofrece un mejor margen en la tensión $V_{DS,max}$ que puede llegar a soportar. 
 
 \setlength{\parskip}{1em}
 
-En base a lo mencionado, se elige al IRFS7730 como el transistor a utilizar para el diseño del convertidor Buck, ya que 
+En base a lo mencionado, se elige al CSD19503 como el transistor a utilizar para el diseño del convertidor Buck, ya que 
 es el que presenta una mejor relación de características. Queda pendiente en las próximas secciones, ajustar el valor de la frecuencia
 tal que se logre un equilibrio entre las pérdidas, la eficiencia y el tamaño del circuito. 
 

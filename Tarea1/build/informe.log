@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  6 APR 2026 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.18)  8 APR 2026 13:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1192,10 +1192,10 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 44.
 (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.aux
-LaTeX Info: Redefining \. on input line 19.
-LaTeX Info: Redefining \% on input line 19.
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 19.
+(babel)             Reported on input line 18.
 )
 \openout1 = `informe.aux'.
 
@@ -1348,94 +1348,109 @@ Package biblatex Info: ... file 'informe.bbl' found.
  (c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.bbl)
 Package biblatex Info: Reference section=0 on input line 44.
 Package biblatex Info: Reference segment=0 on input line 44.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 106.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107.
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 106.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107.
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 106.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 107.
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+trsy on input line 106.
+LaTeX Font Info:    Trying to load font information for U+trsy on input line 107.
  (C:\Users\pablo\AppData\Local\Programs\MiKTeX\tex/latex/trsym\utrsy.fd
 File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 106.
+(hyperref)                removing `math shift' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 106.
+(hyperref)                removing `subscript' on input line 107.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 106.
+(hyperref)                removing `math shift' on input line 107.
 
 (fig/circuito_Foster.tex)
 File: ./fig/circuito_Foster.tex Graphic file (type tex)
- (fig/circuito_Cauer.tex)
-File: ./fig/circuito_Cauer.tex Graphic file (type tex)
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [1{C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 196.
+] (fig/circuito_Cauer.tex)
+File: ./fig/circuito_Cauer.tex Graphic file (type tex)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 196.
+(hyperref)                removing `math shift' on input line 197.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 201.
+(hyperref)                removing `math shift' on input line 197.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 201.
+(hyperref)                removing `math shift' on input line 202.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 205.
+(hyperref)                removing `math shift' on input line 202.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 205.
+(hyperref)                removing `math shift' on input line 206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
+(hyperref)                removing `math shift' on input line 206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
+(hyperref)                removing `math shift' on input line 210.
 
-[2]
-Underfull \hbox (badness 1735) in paragraph at lines 280--283
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 210.
+
+
+Underfull \vbox (badness 5696) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 1735) in paragraph at lines 281--284
 \T1/phv/m/n/10 guien-tes tres al-ter-na-ti-vas a com-pa-rar. El trasis-tor
  []
 
 
-Overfull \hbox (1.08292pt too wide) in paragraph at lines 303--303
+Overfull \hbox (1.08292pt too wide) in paragraph at lines 307--307
 []|$\OML/cmm/m/it/8 R[] []$| 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 303--303
+Underfull \hbox (badness 10000) in alignment at lines 307--307
 [][][][] 
  []
 
+
+Underfull \hbox (badness 5345) in paragraph at lines 319--325
+[]\T1/phv/m/n/10 Por otra par-te, los tran-sis-to-res IRFS7730 y el
+ []
+
 [3]
-Underfull \hbox (badness 1448) in paragraph at lines 393--395
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
+[]\T1/phv/m/n/10 Texas Ins-tru-ments. CSD19503KCS 80-V N-
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 383--383
+\T1/phv/m/n/10 Channel Nex-FET Po-wer MOS-FET Da-tasheet
+ []
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 397--399
 \T1/phv/b/n/8 Juan P. Eli-zon-do \T1/phv/m/n/8 Reali-zó sus es-tu-dios de se-cun-da-ria en el
  []
 
@@ -1445,9 +1460,9 @@ Underfull \hbox (badness 1448) in paragraph at lines 393--395
 [4
 
 ] (c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.aux
-LaTeX Info: Redefining \sptext on input line 19.
-LaTeX Info: Redefining \. on input line 19.
-LaTeX Info: Redefining \% on input line 19.
+LaTeX Info: Redefining \sptext on input line 18.
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
 )
  ***********
 LaTeX2e <2025-11-01>
@@ -1460,17 +1475,17 @@ Package logreq Info: Writing requests to 'informe.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58789 strings out of 467867
- 1380273 string characters out of 5418334
- 2432119 words of memory out of 5000000
- 86932 multiletter control sequences out of 15000+600000
+ 58792 strings out of 467867
+ 1380334 string characters out of 5418334
+ 2424127 words of memory out of 5000000
+ 86935 multiletter control sequences out of 15000+600000
  763753 words of font info for 185 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 99i,13n,108p,1241b,2012s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,108p,1241b,1832s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.pdf (4 pages, 223341 bytes).
+Output written on c:\LaTex\Tra_Potencia\PotTrabajos\Tarea1\build\informe.pdf (4 pages, 225609 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
+ 300 PDF objects out of 1000 (max. 8388607)
  59 named destinations out of 1000 (max. 500000)
  293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

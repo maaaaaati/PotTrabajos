@@ -2381,7 +2381,7 @@
     <bcf:citekey order="6" intorder="1">hart2011power</bcf:citekey>
     <bcf:citekey order="7" intorder="1">IRF540N_ds</bcf:citekey>
     <bcf:citekey order="8" intorder="1">IRFS7730_ds</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">IRF3007_ds</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">CSD19503KCS_ds</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

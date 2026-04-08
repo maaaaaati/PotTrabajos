@@ -547,10 +547,6 @@ INPUT .\fig\circuito_Foster.tex
 INPUT .\fig\circuito_Foster.tex
 INPUT fig\circuito_Foster.tex
 INPUT fig\circuito_Foster.tex
-INPUT .\fig\circuito_Cauer.tex
-INPUT .\fig\circuito_Cauer.tex
-INPUT fig\circuito_Cauer.tex
-INPUT fig\circuito_Cauer.tex
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Users\pablo\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
@@ -575,6 +571,10 @@ INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT .\fig\circuito_Cauer.tex
+INPUT .\fig\circuito_Cauer.tex
+INPUT fig\circuito_Cauer.tex
+INPUT fig\circuito_Cauer.tex
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\pablo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
