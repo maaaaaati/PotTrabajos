@@ -2381,7 +2381,10 @@
     <bcf:citekey order="6" intorder="1">hart2011power</bcf:citekey>
     <bcf:citekey order="7" intorder="1">IRF540N_ds</bcf:citekey>
     <bcf:citekey order="8" intorder="1">IRFS7730_ds</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">CSD19503KCS_ds</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">IRFS4410Z</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">InfineonMOSFETLosses2006</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">InfineonMOSFETLosses2006</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">InfineonMOSFETLosses2006</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

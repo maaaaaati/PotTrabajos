@@ -279,7 +279,7 @@ corresponde a la tensión de entrada al circuito, unos \emph{$48~\mathrm{V}$} en
 \subsection{Opciones para el MOSFET}
 
 Para el transistor MOSFET, se seleccionaron las siguientes tres alternativas a comparar. El trasistor
-IRF540N \cite{IRF540N_ds}, el IRFS7730 \cite{IRFS7730_ds} y el CSD19503 \cite{CSD19503KCS_ds}. A continuación, 
+IRF540N \cite{IRF540N_ds}, el IRFS7730 \cite{IRFS7730_ds} y el IRFS4410Z \cite{IRFS4410Z}. A continuación, 
 se muestra su información más relevante según sus hojas de datos. 
 
 \begin{table}[H]
@@ -292,16 +292,16 @@ se muestra su información más relevante según sus hojas de datos.
         >{\hsize=0.75\hsize}X
     }
         \toprule
-        Parámetro                                   & IRF540N & IRFS7730 & CSD19503 \\
+        Parámetro                                   & IRF540N & IRFS7730 & IRFB4410Z \\
         \midrule
-        $V_{DS,max}~\mathrm{[V]}$                   & $100$   & $75$     & $80$     \\
-        $I_{D}~@~25^\circ\mathrm{C}~\mathrm{[A]}$   & $33$    & $195$    & $100$    \\
-        $R_{DS(on), max}~\mathrm{[m\Omega]}$        & $44$    & $2.6$    & $7.6$    \\
-        $Q_{g}~\mathrm{[nC]}$                       & $71$    & $271$    & $28$     \\
-        $R_{\theta JC}~[^\circ\mathrm{C/W}]$        & $1.15$  & $0.40$   & $0.8$    \\
-        $P_{D, max}~\mathrm{[W]}$                   & $130$   & $375$    & $188$    \\
-        $t_{r}~\mathrm{[ns]}$                       & $35$    & $120$    & $3$      \\
-        $t_{f}~\mathrm{[ns]}$                       & $35$    & $115$    & $2$      \\
+        $V_{DS,max}~\mathrm{[V]}$                   & $100$   & $75$     & $100$     \\
+        $I_{D}~@~25^\circ\mathrm{C}~\mathrm{[A]}$   & $33$    & $195$    & $97$      \\
+        $R_{DS(on)}~\mathrm{[m\Omega]}$             & $44$    & $2.6$    & $7.2$     \\
+        $Q_{g}~\mathrm{[nC]}$                       & $71$    & $271$    & $83$      \\
+        $R_{\theta JC}~[^\circ\mathrm{C/W}]$        & $1.15$  & $0.40$   & $0.65$    \\
+        $P_{D, max}~\mathrm{[W]}$                   & $130$   & $375$    & $230$     \\
+        $t_{r}~\mathrm{[ns]}$                       & $35$    & $120$    & $52$      \\
+        $t_{f}~\mathrm{[ns]}$                       & $35$    & $115$    & $57$       \\
 
         \bottomrule
     \end{tabularx}
@@ -312,22 +312,74 @@ se muestra su información más relevante según sus hojas de datos.
 De la tabla \ref{tab:mosfet_comparison}, se observa que los tres transistores cumplen con los requisitos de tensión y corriente
 analizados en la sección anterior. No obstante el IRF540N tiene una resistencia de conducción mucho más alta que los otros 
 dos, esto es algo bastante relevante que ubica a este transistor en una posición menos llamativa para ser utilizado, puesto que 
-presentaría pérdidas por conducción mayores, a pesar de que su tensión $V_{DS,max}$ es la más alta.
+presentaría pérdidas por conducción mayores.
 
 \setlength{\parskip}{1em}
 
-Por otra parte, los transistores IRFS7730 y el CSD19503 tienen una resistencia de conducción mucho más baja, lo que los convierte
-en una mejor alternativa para reducir las pérdidas por conducción. Hay que considerar que el IRFS7730 tiene un valor de $Q_{g}$ casi
-10 veces mayor que el CSD19503 lo que equivale a mayores pérdidas por conmutación (a esto se suman sus tiempos de conmutación $t_{r}$ y $t_{f}$). 
-Se sabe que las pérdidas por conducción son generalmente más significativas que las pérdidas por conmutación; no obstante, considerando 
-que la diferencia en el IRFS7730 es bastante más alta se podría apostar por un balance entre ambos valores. Además, de que el transistor 
-CSD19503 ofrece un mejor margen en la tensión $V_{DS,max}$ que puede llegar a soportar. 
+De los otros dos transistores, el que presenta un valor de $R_{DS(on)}$ más bajo es el IRFS7730, lo que se traduce en menores pérdidas por conducción.
+No obstante, este transistor tiene un valor de carga de puerta $Q_g$ mucho más alto que el IRFS4410Z, y sus tiempos de conmutación también son considerablemente más
+altos; además, si bien el límite de tensión $V_{DS,max}$ del IRFS7730 es de $75~\mathrm{V}$, lo cual es aceptable para esta aplicación, lo ideal sería poder contar
+con un margen mayor que le de más seguridad de operación al circuito, para que funcione sin problemas.
 
 \setlength{\parskip}{1em}
 
-En base a lo mencionado, se elige al CSD19503 como el transistor a utilizar para el diseño del convertidor Buck, ya que 
-es el que presenta una mejor relación de características. Queda pendiente en las próximas secciones, ajustar el valor de la frecuencia
-tal que se logre un equilibrio entre las pérdidas, la eficiencia y el tamaño del circuito. 
+En base a lo mencionado, se elige al IRFS4410Z como el transistor MOSFET para esta aplicación, ya que presenta un valor de $R_{DS(on)}$ bajo, 
+tiempos de conmutación más rápidos y un límite de tensión $V_{DS,max}$ de $100~\mathrm{V}$, que permite una operación segura.
+
+
+    \subsubsection{Construcción del modelo térmico}
+    Para la construcción del modelo térmico del MOSFET, se utiliza su hoja de datos para ingresar la información 
+    en PLECS, tales como las pérdidas por conducción y modelo Foster. En cuanto a las pérdidas de energía por conmutación especialmente, 
+    es necesario seguir un procedimiento diferente para poder construir una tabla adecuada, según las siguientes ecuaciones \cite{InfineonMOSFETLosses2006}.
+
+    \begin{equation}
+        E_{on} = U_{DD} \cdot I_{Don} \cdot \frac{(t_{ri} + t_{fu})}{2} + Q_{rr} \cdot U_{DD}
+        \label{eq:Eon_losses}
+    \end{equation}
+
+    \begin{equation}
+        E_{off} = U_{DD} \cdot I_{Doff} \cdot \frac{(t_{ru} + t_{fi})}{2}
+        \label{eq:Eoff_losses}
+    \end{equation}
+
+    De los valores presentes en las ecuaciones, la mayoría están dados directamente en la hoja de datos, según las condiciones de prueba
+    que se le aplicaron al MOSFET. Sin embargo, los valores de $t_{fu}$ y $t_{ru}$ deben de ser calculados mediante fórmula, para lo cual 
+    se necesita de los valores de $C_{GD1}$ y $C_{GD2}$, los cuales se obtienen mediante la gráfica de capacitancias
+    típicas contra tensión $V_{DS}$, siguiendo el procedimiento descrito en el manual de Infineon \cite{InfineonMOSFETLosses2006}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{CGD1_CGD2.png}
+        \caption{Obtención de $C_{GD1}$ y $C_{GD2}$}
+        \label{fig:CGD1_CGD2}
+    \end{figure}
+
+    Con los valores obtenidos en la Figura \ref{fig:CGD1_CGD2}, se obtienen los tiempos $t_{fu}$ y $t_{ru}$, que sirven para 
+    el cálculo de las pérdidas energéticas (los cálculos se adjuntan en un documento de Excel). Obteniendo los siguientes resultados. 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{Eon_Eoff_chart.png}
+        \caption{Pérdidas de energía por conmutación del MOSFET}
+        \label{fig:Eon_Eoff}
+    \end{figure}
+
+    Importante mencionar que estos cálculos se hacen en base a las condiciones de prueba del MOSFET mencionados en la hoja de datos, para
+    la conformación del modelo térmico del dispositivo. Las pérdidas por conmutación en el convertidor Buck se analizarán posteriormente y
+    se obtienen por medio de la siguiente ecuación \cite{InfineonMOSFETLosses2006}.
+
+    \begin{equation}
+        P_{sw} = (E_{on} + E_{off}) \cdot f_{sw} 
+    \end{equation}
+
+
+
+
+
+
+
+
+
 
 
 
