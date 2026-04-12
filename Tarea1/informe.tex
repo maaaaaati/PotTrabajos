@@ -385,8 +385,61 @@ tiempos de conmutación más rápidos y un límite de tensión $V_{DS,max}$ de $
 
 \subsection{Opciones para el diodo}
 
-\subsection{Modelado de pérdidas}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabularx}{\columnwidth}{
+        >{\hsize=1.3\hsize\centering\arraybackslash}X 
+        >{\hsize=1.1\hsize\centering\arraybackslash}X 
+        >{\hsize=0.6\hsize\centering\arraybackslash}X 
+        >{\hsize=0.6\hsize\centering\arraybackslash}X
+    }
+        \toprule
+        Parámetro & HFA15PB60PbF & MUR1560 & 1N5408 \\
+        \midrule
+        $V_{RRM}$ [V] & 600 & 600 & 1000 \\
+        $I_{F(AV)}$ [A] & 15 & 15 & 3 \\
+        $V_F$ @ $I_F$ [V] & $\sim1.3$ @ 15A & $\sim1.2$ @ 15A & $\sim1.0$ @ 3A \\
+        $t_{rr}$ [ns] & $\sim19$ & $\sim50$ & $>2000$ \\
+        $Q_{rr}$ [nC] & $\sim80$ & $\sim150$ & N/A (very high) \\
+        Tipo de recuperación & Ultrafast (soft) & Ultrafast & Standard (slow) \\
+        $R_{\theta JC}$ [$^\circ$C/W] & $\sim2.0$ & $\sim2.5$ & $\sim3.0$ \\
+        Aplicación típica & SMPS, converters & SMPS & Rectificación 50/60 Hz \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Comparación de diodos de potencia}
+    \label{tab:diode_comparison}
+\end{table}
 
+El diodo seleccionado fue el HFA15PB60PbF debido a su bajo tiempo de recuperación inversa y baja carga de recuperación (Qrr), lo cual reduce significativamente las pérdidas de conmutación en aplicaciones de alta frecuencia como convertidores buck.
+
+En comparación con diodos de propósito general como el 1N5408, el cual presenta tiempos de recuperación del orden de microsegundos, el HFA15PB60PbF ofrece tiempos en el orden de nanosegundos, haciéndolo adecuado para operación en alta frecuencia.
+
+Asimismo, frente a otros diodos ultrarrápidos como el MUR1560, el HFA15PB60PbF presenta menor Qrr, lo que implica menores pérdidas de conmutación y menor generación de calor, siendo más eficiente para la aplicación propuesta.
+
+
+\subsection{Modelado de pérdidas}
+Para modelar las pérdidas del diode (por conducción y conmutación) 
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{CORRIENTEVOLLtaje.png}
+        \caption{Curva de transferencia del diodo}
+        \label{fig:DIODEtransfer}
+    \end{figure}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{qrr_didtAT25.png}
+        \caption{Carga de recuperación en reversa del diode como función de la tasa de cambio de la corriente directa del diodo a 25 °C}
+        \label{fig:qrr25}
+    \end{figure}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{qrr_didtAT125.png}
+        \caption{Carga de recuperación en reversa del diode como función de la tasa de cambio de la corriente directa del diodo a 125 °C}
+        \label{fig:qrr125}
+    \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
