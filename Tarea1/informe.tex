@@ -419,7 +419,10 @@ Asimismo, frente a otros diodos ultrarrápidos como el MUR1560, el HFA15PB60PbF 
 
 
 \subsection{Modelado de pérdidas}
-Para modelar las pérdidas del diode (por conducción y conmutación) 
+Para modelar las pérdidas del diodo (por conducción y conmutación), se extrajeron datos directamente de las curvas características del datasheet \cite{InfineonMOSFETLosses2006}. Posteriormente, se utilizaron líneas de tendencia (trendlines) para ajustar dichos datos a expresiones matemáticas, permitiendo obtener funciones continuas en lugar de valores discretos.
+
+Este enfoque facilita una mejor aproximación del comportamiento real del dispositivo, ya que permite interpolar valores para diferentes condiciones de operación y reduce errores asociados al uso de puntos aislados. En el caso de las pérdidas por conmutación, se ajustó la relación entre la carga de recuperación inversa ($Q_{rr}$) y la razón de cambio de corriente ($di/dt$), mientras que para las pérdidas por conducción se modeló la característica $V$-$I$ del diodo mediante una aproximación lineal.
+
 \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\linewidth]{CORRIENTEVOLLtaje.png}
@@ -429,17 +432,11 @@ Para modelar las pérdidas del diode (por conducción y conmutación)
 
 \begin{figure}[H]
         \centering
-        \includegraphics[width=0.8\linewidth]{qrr_didtAT25.png}
-        \caption{Carga de recuperación en reversa del diode como función de la tasa de cambio de la corriente directa del diodo a 25 °C}
+        \includegraphics[width=0.8\linewidth]{qrr_didt.png}
+        \caption{Carga de recuperación en reversa del diode como función de la tasa de cambio de la corriente directa del diodo}
         \label{fig:qrr25}
     \end{figure}
 
-\begin{figure}[H]
-        \centering
-        \includegraphics[width=0.8\linewidth]{qrr_didtAT125.png}
-        \caption{Carga de recuperación en reversa del diode como función de la tasa de cambio de la corriente directa del diodo a 125 °C}
-        \label{fig:qrr125}
-    \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

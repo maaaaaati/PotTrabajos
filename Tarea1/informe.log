@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  11 APR 2026 22:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  11 APR 2026 22:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1472,34 +1472,26 @@ Underfull \hbox (badness 10000) in alignment at lines 409--409
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<./fig/CORRIENTEVOLLtaje.png, id=217, 609.477pt x 417.633pt>
+<./fig/CORRIENTEVOLLtaje.png, id=218, 609.477pt x 417.633pt>
 File: ./fig/CORRIENTEVOLLtaje.png Graphic file (type png)
 <use ./fig/CORRIENTEVOLLtaje.png>
-Package pdftex.def Info: ./fig/CORRIENTEVOLLtaje.png  used on input line 425.
+Package pdftex.def Info: ./fig/CORRIENTEVOLLtaje.png  used on input line 428.
 (pdftex.def)             Requested size: 195.39433pt x 133.88744pt.
-<./fig/qrr_didtAT25.png, id=218, 551.88pt x 310.323pt>
-File: ./fig/qrr_didtAT25.png Graphic file (type png)
-<use ./fig/qrr_didtAT25.png>
-Package pdftex.def Info: ./fig/qrr_didtAT25.png  used on input line 432.
-(pdftex.def)             Requested size: 195.39433pt x 109.86948pt.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 433.
- (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-) [4 <./fig/CGD1_CGD2.png> <./fig/Eon_Eoff_chart.png> <./fig/CORRIENTEVOLLtaje.png>]
-<./fig/qrr_didtAT125.png, id=232, 548.157pt x 301.344pt>
-File: ./fig/qrr_didtAT125.png Graphic file (type png)
-<use ./fig/qrr_didtAT125.png>
-Package pdftex.def Info: ./fig/qrr_didtAT125.png  used on input line 439.
-(pdftex.def)             Requested size: 195.39433pt x 107.41698pt.
+ [4 <./fig/CGD1_CGD2.png> <./fig/Eon_Eoff_chart.png>]
+<./fig/qrr_didt.png, id=230, 543.996pt x 292.365pt>
+File: ./fig/qrr_didt.png Graphic file (type png)
+<use ./fig/qrr_didt.png>
+Package pdftex.def Info: ./fig/qrr_didt.png  used on input line 435.
+(pdftex.def)             Requested size: 195.39433pt x 105.0104pt.
 
-Underfull \hbox (badness 1448) in paragraph at lines 502--504
+Underfull \hbox (badness 1448) in paragraph at lines 499--501
 \T1/phv/b/n/8 Juan P. Eli-zon-do \T1/phv/m/n/8 Reali-zó sus es-tu-dios de se-cun-da-ria en el
  []
 
 \tf@thm=\write6
 \openout6 = `informe.thm'.
 
-[5 <./fig/qrr_didtAT25.png> <./fig/qrr_didtAT125.png>] (informe.aux
+[5 <./fig/CORRIENTEVOLLtaje.png> <./fig/qrr_didt.png>] (informe.aux
 LaTeX Info: Redefining \sptext on input line 18.
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
@@ -1509,23 +1501,23 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: C71814082F484577C2707BA87BBCCD3B;6273.
+(rerunfilecheck)             Checksum: 3765FA932AA6DA60B4E8A9BE82A90B2E;6272.
 Package logreq Info: Writing requests to 'informe.run.xml'.
 \openout1 = `informe.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58026 strings out of 474486
- 1357963 string characters out of 5743755
- 2337510 words of memory out of 5000000
- 79547 multiletter control sequences out of 15000+600000
- 694414 words of font info for 182 fonts, out of 8000000 for 9000
+ 57981 strings out of 474486
+ 1357128 string characters out of 5743755
+ 2337331 words of memory out of 5000000
+ 79507 multiletter control sequences out of 15000+600000
+ 694101 words of font info for 181 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  99i,13n,101p,1194b,1826s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on informe.pdf (5 pages, 733408 bytes).
+Output written on informe.pdf (5 pages, 663122 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 326 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
