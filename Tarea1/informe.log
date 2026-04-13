@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  11 APR 2026 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.11)  13 APR 2026 14:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1185,8 +1185,8 @@ LaTeX Font Info:    Trying to load font information for T1+phv on input line 44.
 (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (informe.aux
-LaTeX Info: Redefining \. on input line 18.
-LaTeX Info: Redefining \% on input line 18.
+LaTeX Info: Redefining \. on input line 20.
+LaTeX Info: Redefining \% on input line 20.
 )
 \openout1 = `informe.aux'.
 
@@ -1339,162 +1339,160 @@ Package biblatex Info: ... file 'informe.bbl' found.
  (informe.bbl)
 Package biblatex Info: Reference section=0 on input line 44.
 Package biblatex Info: Reference segment=0 on input line 44.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 107.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 107.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 107.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 101.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+trsy on input line 107.
+LaTeX Font Info:    Trying to load font information for U+trsy on input line 101.
  (C:\Users\matia\AppData\Local\Programs\MiKTeX\tex/latex/trsym\utrsy.fd
 File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 107.
+(hyperref)                removing `math shift' on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 107.
+(hyperref)                removing `subscript' on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 107.
+(hyperref)                removing `math shift' on input line 121.
 
 (fig/circuito_Foster.tex)
 File: ./fig/circuito_Foster.tex Graphic file (type tex)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1{C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ] (fig/circuito_Cauer.tex)
 File: ./fig/circuito_Cauer.tex Graphic file (type tex)
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 197.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 197.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 202.
+(hyperref)                removing `math shift' on input line 215.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 202.
+(hyperref)                removing `math shift' on input line 215.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 206.
+(hyperref)                removing `math shift' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 206.
+(hyperref)                removing `math shift' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 210.
+(hyperref)                removing `math shift' on input line 224.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 210.
+(hyperref)                removing `math shift' on input line 224.
 
 
-Underfull \vbox (badness 5696) has occurred while \output is active []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 228.
 
- [2]
-Underfull \hbox (badness 1735) in paragraph at lines 281--284
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 228.
+
+[2]
+Underfull \hbox (badness 1735) in paragraph at lines 299--302
 \T1/phv/m/n/10 guien-tes tres al-ter-na-ti-vas a com-pa-rar. El trasis-tor
  []
 
 
-Overfull \hbox (1.79196pt too wide) in paragraph at lines 307--307
+Overfull \hbox (1.79196pt too wide) in paragraph at lines 325--325
 []|\T1/phv/m/n/8 IRFB4410Z| 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 307--307
+Underfull \hbox (badness 10000) in alignment at lines 325--325
 [][][][] 
  []
 
-
-Underfull \hbox (badness 1769) in paragraph at lines 331--334
+[3]
+Underfull \hbox (badness 1769) in paragraph at lines 349--352
  []\T1/phv/m/sl/10 1. Cons-truc-ción del mo-de-lo tér-mi-co: [][][] \T1/phv/m/n/10 Pa-ra la
  []
 
-<./fig/CGD1_CGD2.png, id=194, 501.37312pt x 444.15938pt>
+<./fig/CGD1_CGD2.png, id=214, 501.37312pt x 444.15938pt>
 File: ./fig/CGD1_CGD2.png Graphic file (type png)
 <use ./fig/CGD1_CGD2.png>
-Package pdftex.def Info: ./fig/CGD1_CGD2.png  used on input line 352.
+Package pdftex.def Info: ./fig/CGD1_CGD2.png  used on input line 370.
 (pdftex.def)             Requested size: 195.39433pt x 173.09946pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-<./fig/Eon_Eoff_chart.png, id=215, 359.598pt x 213.963pt>
+<./fig/Eon_Eoff_chart.png, id=217, 359.598pt x 213.963pt>
 File: ./fig/Eon_Eoff_chart.png Graphic file (type png)
 <use ./fig/Eon_Eoff_chart.png>
-Package pdftex.def Info: ./fig/Eon_Eoff_chart.png  used on input line 362.
+Package pdftex.def Info: ./fig/Eon_Eoff_chart.png  used on input line 380.
 (pdftex.def)             Requested size: 195.39433pt x 116.25981pt.
 
-Overfull \hbox (2.70671pt too wide) in paragraph at lines 409--409
+Overfull \hbox (2.70671pt too wide) in paragraph at lines 427--427
  []|\T1/phv/m/n/8 HFA15PB60PbF| 
  []
 
 
-Overfull \hbox (5.57733pt too wide) in paragraph at lines 409--409
+Overfull \hbox (5.57733pt too wide) in paragraph at lines 427--427
  []|\T1/phv/m/n/8 MUR1560| 
  []
 
 
-Overfull \hbox (2.0332pt too wide) in paragraph at lines 409--409
+Overfull \hbox (2.0332pt too wide) in paragraph at lines 427--427
  []|\T1/phv/m/n/8 Standard 
  []
 
 
-Overfull \hbox (14.91325pt too wide) in paragraph at lines 409--409
+Overfull \hbox (14.91325pt too wide) in paragraph at lines 427--427
  []|\T1/phv/m/n/8 Rectificación 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 409--409
+Underfull \hbox (badness 10000) in alignment at lines 427--427
 [][][][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<./fig/CORRIENTEVOLLtaje.png, id=218, 609.477pt x 417.633pt>
+[4 <./fig/CGD1_CGD2.png> <./fig/Eon_Eoff_chart.png>]
+<./fig/CORRIENTEVOLLtaje.png, id=234, 609.477pt x 417.633pt>
 File: ./fig/CORRIENTEVOLLtaje.png Graphic file (type png)
 <use ./fig/CORRIENTEVOLLtaje.png>
-Package pdftex.def Info: ./fig/CORRIENTEVOLLtaje.png  used on input line 428.
+Package pdftex.def Info: ./fig/CORRIENTEVOLLtaje.png  used on input line 446.
 (pdftex.def)             Requested size: 195.39433pt x 133.88744pt.
- [4 <./fig/CGD1_CGD2.png> <./fig/Eon_Eoff_chart.png>]
-<./fig/qrr_didt.png, id=230, 543.996pt x 292.365pt>
+<./fig/qrr_didt.png, id=235, 543.996pt x 292.365pt>
 File: ./fig/qrr_didt.png Graphic file (type png)
 <use ./fig/qrr_didt.png>
-Package pdftex.def Info: ./fig/qrr_didt.png  used on input line 435.
+Package pdftex.def Info: ./fig/qrr_didt.png  used on input line 453.
 (pdftex.def)             Requested size: 195.39433pt x 105.0104pt.
-
-Underfull \hbox (badness 1448) in paragraph at lines 499--501
+ [5 <./fig/CORRIENTEVOLLtaje.png> <./fig/qrr_didt.png>]
+Underfull \hbox (badness 1448) in paragraph at lines 517--519
 \T1/phv/b/n/8 Juan P. Eli-zon-do \T1/phv/m/n/8 Reali-zó sus es-tu-dios de se-cun-da-ria en el
  []
 
 \tf@thm=\write6
 \openout6 = `informe.thm'.
 
-[5 <./fig/CORRIENTEVOLLtaje.png> <./fig/qrr_didt.png>] (informe.aux
-LaTeX Info: Redefining \sptext on input line 18.
-LaTeX Info: Redefining \. on input line 18.
-LaTeX Info: Redefining \% on input line 18.
+[6
+
+] (informe.aux
+LaTeX Info: Redefining \sptext on input line 20.
+LaTeX Info: Redefining \. on input line 20.
+LaTeX Info: Redefining \% on input line 20.
 )
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1507,17 +1505,17 @@ Package logreq Info: Writing requests to 'informe.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57981 strings out of 474486
- 1357128 string characters out of 5743755
- 2337331 words of memory out of 5000000
- 79507 multiletter control sequences out of 15000+600000
+ 57967 strings out of 474486
+ 1356717 string characters out of 5743755
+ 2341407 words of memory out of 5000000
+ 79489 multiletter control sequences out of 15000+600000
  694101 words of font info for 181 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  99i,13n,101p,1194b,1826s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/matia/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on informe.pdf (5 pages, 663122 bytes).
+Output written on informe.pdf (6 pages, 665970 bytes).
 PDF statistics:
- 339 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  321 words of extra memory for PDF output out of 10000 (max. 10000000)
 

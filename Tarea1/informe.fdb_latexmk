@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber informe"] 1775968490.61492 "informe.bcf" "informe.bbl" "informe" 1775968520.22301 0
-  "informe.bcf" 1775968519 107847 0b687ccbd18d4e7a6923fbc51835ce7b "pdflatex"
-  "literatura.bib" 1775968484 2168 876d89e8751969b4efb062df5bfd115f ""
+["biber informe"] 1776112397.87559 "informe.bcf" "informe.bbl" "informe" 1776112409.31557 0
+  "informe.bcf" 1776112408 107995 3c51af61641488917fbf54381da06cf0 "pdflatex"
+  "literatura.bib" 1776112364 2436 a4b2ec4a3260a6ac97befdfe219cd710 ""
   (generated)
   "informe.bbl"
   "informe.blg"
   (rewritten before read)
-["pdflatex"] 1775968517.01989 "c:/Users/matia/Downloads/Tarea1POT/Tarea1/informe.tex" "informe.pdf" "informe" 1775968520.22387 0
+["pdflatex"] 1776112406.14157 "c:/Users/matia/Downloads/Tarea1POT/Tarea1/informe.tex" "informe.pdf" "informe" 1776112409.31638 0
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775790566 124346 55158e4ffab625ef9c37e66c4ee22ffe ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1741727281 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1741727284 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -280,18 +280,18 @@
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "c:/Users/matia/Downloads/Tarea1POT/Tarea1/informe.tex" 1775968516 23978 252259cad728317a9726af299b69791b ""
+  "c:/Users/matia/Downloads/Tarea1POT/Tarea1/informe.tex" 1776112393 26001 d941c2bbe5b681cc8faf7d8663c3ed73 ""
   "fig/CGD1_CGD2.png" 1775961975 52308 82578f4d297d5528bcfeba126d9d1c98 ""
   "fig/CORRIENTEVOLLtaje.png" 1775967424 188463 8a5c4461aba11a0a3cd56ab2cd15d126 ""
   "fig/Eon_Eoff_chart.png" 1775961975 100625 46f1eada27764864e7514f13d5875be5 ""
   "fig/circuito_Cauer.tex" 1775961975 819 8244dba111ca3e58cb978b957c54c621 ""
   "fig/circuito_Foster.tex" 1775961975 759 5d22b03509199869a21248f11622e558 ""
   "fig/qrr_didt.png" 1775968268 259016 b23c14da27c5212ac12d75838c84256b ""
-  "informe.aux" 1775968519 10034 f98589f9ec87db3037beeae83992aabd "pdflatex"
-  "informe.bbl" 1775968492 6078 b11452b65470ad5face5b8e40ab6ac96 "biber informe"
-  "informe.out" 1775968519 6272 3765fa932aa6da60b4e8a9be82a90b2e "pdflatex"
-  "informe.run.xml" 1775968519 2434 6f2c741eea78e69b8ddf003fef666404 "pdflatex"
-  "informe.tex" 1775968516 23978 252259cad728317a9726af299b69791b ""
+  "informe.aux" 1776112408 10271 d362200604ee63fde2e70aa9e59bbb86 "pdflatex"
+  "informe.bbl" 1776112399 7638 c46bacba213303aa916b74731cad87e4 "biber informe"
+  "informe.out" 1776112408 6272 3765fa932aa6da60b4e8a9be82a90b2e "pdflatex"
+  "informe.run.xml" 1776112408 2434 6f2c741eea78e69b8ddf003fef666404 "pdflatex"
+  "informe.tex" 1776112393 26001 d941c2bbe5b681cc8faf7d8663c3ed73 ""
   "instructivo.sty" 1774648931 9945 6e73d3f6dfa117e9424bf62a4f29314d ""
   (generated)
   "informe.aux"

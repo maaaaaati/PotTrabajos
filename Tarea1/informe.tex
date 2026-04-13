@@ -93,16 +93,34 @@ Como parte de la ejecución de un buen diseño se presentan los principales fund
 que sustentan lo realizado en este trabajo.
 
 \subsection{Convertidor Buck}
+El convertidor Buck es un convertidor DC-DC reductor que permite obtener un voltaje de salida menor al voltaje de entrada mediante el uso de un interruptor controlado (generalmente un MOSFET), un diodo, un inductor y un capacitor.
 
+Su principio de operación se basa en la conmutación periódica del interruptor, lo cual genera dos estados: conducción y apagado \cite{hart2011power}. En estado de conducción, el inductor almacena energía, mientras que en el estado de apagado, esta energía se transfiere a la carga.
+
+En régimen ideal y en conducción continua, la relación entre el voltaje de salida y el de entrada está dada por:
+\begin{equation}
+    V_o = D \cdot V_{in}
+\end{equation}
+donde $D$ es el ciclo de trabajo de la señal de control.
+
+---
 
 \subsection{Pérdidas en semiconductores de potencia}
+Las pérdidas en dispositivos semiconductores de potencia determinan su eficiencia y comportamiento térmico. Estas se clasifican principalmente en pérdidas por conducción y por conmutación.
 
-    \subsubsection{Perdidas por conducción}
+\subsubsection{Perdidas por conducción}
+Las pérdidas por conducción ocurren cuando el dispositivo se encuentra en estado ON. En el caso de un MOSFET, estas pérdidas están asociadas a su resistencia de encendido $R_{on}$ y se pueden expresar como:
+\begin{equation}
+    P_{cond} = I^2 \cdot R_{on}
+\end{equation}
+donde $I$ es la corriente que circula por el dispositivo \cite{kassakian1991principles}.
 
-    \subsubsection{Perdidas por conmutación}
-    
-    \subsubsection{$R_{on}$ y su dependencia con la temperatura}
+\subsubsection{Perdidas por conmutación}
+Las pérdidas por conmutación se producen durante los intervalos de encendido y apagado del dispositivo, debido a la superposición de voltaje y corriente. Estas pérdidas dependen de la frecuencia de conmutación y de los tiempos de transición.
+\subsubsection{$R_{on}$ y su dependencia con la temperatura}
+La resistencia $R_{on}$ de los MOSFETs depende fuertemente de la temperatura de la unión. A medida que la temperatura aumenta, la movilidad de los portadores disminuye, lo que incrementa el valor de $R_{on}$.
 
+Este comportamiento provoca un aumento en las pérdidas por conducción y puede generar un efecto de realimentación térmica si no se controla adecuadamente. Por ello, es fundamental considerar esta dependencia en el diseño térmico del sistema.
 
 \subsection{Modelos térmicos}
     El comportamiento térmico de un semiconductor se puede representar

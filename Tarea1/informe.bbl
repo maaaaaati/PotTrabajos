@@ -19,36 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{schutze2008thermal}{report}{}
-      \name{author}{1}{}{%
-        {{hash=b3ffdd240c104fe649cef81340e218f1}{%
-           family={Schütze},
-           familyi={S\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Infineon Technologies AG}%
-      }
-      \list{location}{1}{%
-        {Warstein, Germany}%
-      }
-      \strng{namehash}{b3ffdd240c104fe649cef81340e218f1}
-      \strng{fullhash}{b3ffdd240c104fe649cef81340e218f1}
-      \strng{bibnamehash}{b3ffdd240c104fe649cef81340e218f1}
-      \strng{authorbibnamehash}{b3ffdd240c104fe649cef81340e218f1}
-      \strng{authornamehash}{b3ffdd240c104fe649cef81340e218f1}
-      \strng{authorfullhash}{b3ffdd240c104fe649cef81340e218f1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Application Note, Version 1.0}
-      \field{number}{AN2008-03}
-      \field{title}{Thermal equivalent circuit models}
-      \field{type}{techreport}
-      \field{year}{2008}
-    \endentry
     \entry{hart2011power}{book}{}
       \name{author}{1}{}{%
         {{hash=bfa0ccb8483cd90aacd9d855fd3c7400}{%
@@ -69,19 +39,86 @@
       \strng{authorbibnamehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
       \strng{authornamehash}{bfa0ccb8483cd90aacd9d855fd3c7400}
       \strng{authorfullhash}{bfa0ccb8483cd90aacd9d855fd3c7400}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Power Electronics}
       \field{year}{2011}
     \endentry
+    \entry{kassakian1991principles}{book}{}
+      \name{author}{3}{}{%
+        {{hash=7dc1ed0a0c8a9953ace2a16ea4f5983b}{%
+           family={Kassakian},
+           familyi={K\bibinitperiod},
+           given={John\bibnamedelima G.},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=0cebb4ac50f97322f81363ce3d138404}{%
+           family={Schlecht},
+           familyi={S\bibinitperiod},
+           given={Martin\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=854c64c2cfd55127f9116d0fed13050b}{%
+           family={Verghese},
+           familyi={V\bibinitperiod},
+           given={George\bibnamedelima C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Reading, Massachusetts}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{ef7bec5218d14a8b9dea5c6e5211b0ad}
+      \strng{fullhash}{ef7bec5218d14a8b9dea5c6e5211b0ad}
+      \strng{bibnamehash}{ef7bec5218d14a8b9dea5c6e5211b0ad}
+      \strng{authorbibnamehash}{ef7bec5218d14a8b9dea5c6e5211b0ad}
+      \strng{authornamehash}{ef7bec5218d14a8b9dea5c6e5211b0ad}
+      \strng{authorfullhash}{ef7bec5218d14a8b9dea5c6e5211b0ad}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Principles of Power Electronics}
+      \field{year}{1991}
+    \endentry
+    \entry{schutze2008thermal}{report}{}
+      \name{author}{1}{}{%
+        {{hash=b3ffdd240c104fe649cef81340e218f1}{%
+           family={Schütze},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Infineon Technologies AG}%
+      }
+      \list{location}{1}{%
+        {Warstein, Germany}%
+      }
+      \strng{namehash}{b3ffdd240c104fe649cef81340e218f1}
+      \strng{fullhash}{b3ffdd240c104fe649cef81340e218f1}
+      \strng{bibnamehash}{b3ffdd240c104fe649cef81340e218f1}
+      \strng{authorbibnamehash}{b3ffdd240c104fe649cef81340e218f1}
+      \strng{authornamehash}{b3ffdd240c104fe649cef81340e218f1}
+      \strng{authorfullhash}{b3ffdd240c104fe649cef81340e218f1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Application Note, Version 1.0}
+      \field{number}{AN2008-03}
+      \field{title}{Thermal equivalent circuit models}
+      \field{type}{techreport}
+      \field{year}{2008}
+    \endentry
     \entry{IRF540N_ds}{manual}{}
       \list{organization}{1}{%
         {Infineon Technologies}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{note}{Disponible: \href{https://www.infineon.com/assets/row/public/documents/24/49/infineon-irf540n-datasheet-en.pdf}}
       \field{title}{IRF540N Power MOSFET Datasheet}
@@ -91,8 +128,8 @@
       \list{organization}{1}{%
         {Infineon Technologies}%
       }
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{note}{Disponible: \href{https://www.infineon.com/assets/row/public/documents/24/49/infineon-irfs7730-datasheet-en.pdf}}
       \field{title}{IRFS7730PbF MOSFET Datasheet}
@@ -113,8 +150,8 @@
       \strng{authornamehash}{a4bb4dca7dd91fd8bfdb1d83ea2837aa}
       \strng{authorfullhash}{a4bb4dca7dd91fd8bfdb1d83ea2837aa}
       \field{extraname}{1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{IRFS4410Z HEXFET Power MOSFET Datasheet}
