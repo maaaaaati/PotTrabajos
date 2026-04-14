@@ -463,9 +463,150 @@ Este enfoque facilita una mejor aproximación del comportamiento real del dispos
 
 \subsection{Circuito térmico del sistema}
 
+El circuito térmico completo del sistema se construye considerando el flujo de calor desde la unión del semiconductor hasta el ambiente. Para ello, se identifican tres tramos principales: unión--cápsula, cápsula--disipador y disipador--ambiente. Cada uno de estos tramos representa una oposición al flujo térmico, de forma análoga a como una resistencia eléctrica se opone al flujo de corriente.
+
+En este modelo, la potencia disipada por el MOSFET se interpreta como una fuente de calor, mientras que la temperatura corresponde a la variable de potencial térmico. Así, el calor generado en la unión del dispositivo se propaga hacia la cápsula, luego al disipador y finalmente al ambiente. La cadena térmica general puede expresarse mediante los nodos de temperatura $T_j$, $T_c$, $T_s$ y $T_a$, correspondientes a unión, cápsula, disipador y ambiente, respectivamente.
+
+De manera general, el incremento de temperatura entre la unión y el ambiente puede expresarse como
+
+\begin{equation}
+T_j - T_a = P_{loss}\left(R_{\theta jc}+R_{\theta cs}+R_{\theta sa}\right)
+\label{eq:thermal_chain_general}
+\end{equation}
+
+donde $P_{loss}$ es la potencia total disipada por el MOSFET, $R_{\theta jc}$ es la resistencia térmica unión--cápsula, $R_{\theta cs}$ es la resistencia térmica cápsula--disipador y $R_{\theta sa}$ es la resistencia térmica disipador--ambiente.
+
+
 \subsection{Modelo Foster del MOSFET}
 
+Para modelar térmicamente el tramo unión--cápsula del MOSFET seleccionado, se empleó una red térmica equivalente tipo Foster ajustada a la curva de impedancia térmica transitoria $Z_{th,jc}(t)$. Este modelo permite representar la evolución temporal del flujo de calor desde la unión del semiconductor hacia la cápsula mediante la suma de varias ramas térmicas equivalentes.
+
+La impedancia térmica del modelo Foster utilizado se expresa como
+
+\begin{equation}
+Z_{th,jc}^{F}(t)=\sum_{i=1}^{4} R_{F,i}\left(1-e^{-t/\tau_{F,i}}\right)
+\label{eq:zth_foster_mosfet}
+\end{equation}
+
+donde $R_{F,i}$ representa la resistencia térmica de cada rama y $\tau_{F,i}$ la constante de tiempo asociada. Para el MOSFET analizado, los parámetros del modelo Foster de cuatro términos fueron los siguientes:
+
+\begin{equation}
+R_F=
+\left[
+\begin{array}{c}
+0.2027163\\
+0.0001973\\
+0.0975956\\
+0.3461252
+\end{array}
+\right]
+\ ^\circ\mathrm{C/W}
+\label{eq:rf_mosfet}
+\end{equation}
+
+\begin{equation}
+\tau_F=
+\left[
+\begin{array}{c}
+1.680703\times10^{-4}\\
+1.685360\times10^{-4}\\
+4.148904\times10^{-3}\\
+4.153805\times10^{-3}
+\end{array}
+\right]
+\ \mathrm{s}
+\label{eq:tauf_mosfet}
+\end{equation}
+
+A partir de estos valores, las capacitancias térmicas equivalentes de cada rama se obtienen mediante
+
+\begin{equation}
+C_{F,i}=\frac{\tau_{F,i}}{R_{F,i}}
+\label{eq:cf_general}
+\end{equation}
+
+resultando
+
+\begin{equation}
+C_F=
+\left[
+\begin{array}{c}
+8.290914\times10^{-4}\\
+8.542121\times10^{-1}\\
+4.251116\times10^{-2}\\
+1.200088\times10^{-2}
+\end{array}
+\right]
+\ \mathrm{J/^\circ C}
+\label{eq:cf_mosfet}
+\end{equation}
+
+La suma de resistencias térmicas del modelo Foster es
+
+\begin{equation}
+\sum_{i=1}^{4} R_{F,i}=0.6466344\ ^\circ\mathrm{C/W}
+\label{eq:sum_rf}
+\end{equation}
+
+lo cual representa la resistencia térmica total del tramo unión--cápsula del dispositivo. La topología correspondiente consiste en cuatro ramas RC equivalentes, cuya contribución conjunta reproduce el comportamiento térmico transitorio del MOSFET en dicho tramo. Esta representación sirve como base para la conversión posterior a una red tipo Cauer y para la integración del dispositivo dentro de la cadena térmica completa del sistema.
+
+
+
 \subsection{Conversión a modelo Cauer del MOSFET}
+
+Con el fin de obtener una representación térmica en escalera para el tramo unión--cápsula, se realizó la conversión del modelo Foster de cuatro términos a un modelo Cauer utilizando MATLAB. Para ello, se partió de la función racional asociada a la impedancia térmica del modelo Foster y se aplicó un procedimiento de extracción recursiva de elementos térmicos equivalentes, conservando los cuatro parámetros del ajuste original.
+
+Como resultado de la conversión, se obtuvo la siguiente red Cauer de cuatro términos:
+
+\begin{equation}
+R_C=
+\left[
+\begin{array}{c}
+0.2395617\\
+0.4070717\\
+8.489928\times10^{-7}\\
+8.996408\times10^{-8}
+\end{array}
+\right]
+\ ^\circ\mathrm{C/W}
+\label{eq:rc_mosfet}
+\end{equation}
+
+\begin{equation}
+C_C=
+\left[
+\begin{array}{c}
+7.609419\times10^{-4}\\
+9.405558\times10^{-3}\\
+1.994115\times10^{2}\\
+4.592144\times10^{4}
+\end{array}
+\right]
+\ \mathrm{J/^\circ C}
+\label{eq:cc_mosfet}
+\end{equation}
+
+La suma de resistencias térmicas del modelo Cauer obtenido es
+
+\begin{equation}
+\sum_{i=1}^{4} R_{C,i}=0.6466344\ ^\circ\mathrm{C/W}
+\label{eq:sum_rc}
+\end{equation}
+
+valor que coincide con la resistencia térmica total del modelo Foster. Esto confirma que la conversión conserva correctamente la oposición térmica global del tramo unión--cápsula.
+
+Para validar el comportamiento del modelo convertido, se comparó en MATLAB la respuesta temporal $Z_{th}(t)$ del modelo Foster original con la del modelo Cauer obtenido ante un escalón unitario de potencia. La comparación mostró superposición prácticamente exacta entre ambas curvas, lo que confirma que la transformación preserva la dinámica térmica del dispositivo. Adicionalmente, se obtuvo un error máximo absoluto de $3.8336\times10^{-14}\ ^\circ$C/W y un error máximo relativo de $1.7414\times10^{-11}$, por lo que la equivalencia entre ambas representaciones puede considerarse numéricamente exacta para efectos de simulación.
+
+Los resultados obtenidos muestran que, aunque la red Cauer reproduce correctamente la respuesta térmica del modelo Foster, los dos últimos términos presentan resistencias térmicas muy pequeñas y capacitancias térmicas muy elevadas. Este comportamiento se asocia a la cercanía entre pares de constantes de tiempo del ajuste Foster original, por lo que la red Cauer resultante debe interpretarse como una representación equivalente válida desde el punto de vista dinámico, más que como una descomposición física única de las capas internas del encapsulado.
+
+La Figura~\ref{fig:foster_cauer_compare} muestra la comparación entre ambas respuestas térmicas, mientras que el archivo \texttt{.m} adjunto permite verificar el procedimiento de conversión y validación empleado.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{foster_cauer_compare.png}
+    \caption{Comparación de la respuesta térmica $Z_{th}(t)$ del modelo Foster y del modelo Cauer obtenidos para el MOSFET seleccionado.}
+    \label{fig:foster_cauer_compare}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
