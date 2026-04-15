@@ -435,9 +435,9 @@ En comparación con diodos de propósito general como el 1N5408, el cual present
 
 Asimismo, frente a otros diodos ultrarrápidos como el MUR1560, el HFA15PB60PbF presenta menor Qrr, lo que implica menores pérdidas de conmutación y menor generación de calor, siendo más eficiente para la aplicación propuesta.
 
+\subsubsection{Construcción del modelo térmico}
 
-\subsection{Modelado de pérdidas}
-Para modelar las pérdidas del diodo (por conducción y conmutación), se extrajeron datos directamente de las curvas características del datasheet \cite{InfineonMOSFETLosses2006}. Posteriormente, se utilizaron líneas de tendencia (trendlines) para ajustar dichos datos a expresiones matemáticas, permitiendo obtener funciones continuas en lugar de valores discretos.
+Para generar el modelo de pérdidas del diodo (por conducción y conmutación), se extrajeron datos directamente de las curvas características del datasheet \cite{InfineonMOSFETLosses2006}. Posteriormente, se utilizaron líneas de tendencia (trendlines) para ajustar dichos datos a expresiones matemáticas, permitiendo obtener funciones continuas en lugar de valores discretos.
 
 Este enfoque facilita una mejor aproximación del comportamiento real del dispositivo, ya que permite interpolar valores para diferentes condiciones de operación y reduce errores asociados al uso de puntos aislados. En el caso de las pérdidas por conmutación, se ajustó la relación entre la carga de recuperación inversa ($Q_{rr}$) y la razón de cambio de corriente ($di/dt$), mientras que para las pérdidas por conducción se modeló la característica $V$-$I$ del diodo mediante una aproximación lineal.
 
@@ -451,9 +451,68 @@ Este enfoque facilita una mejor aproximación del comportamiento real del dispos
 \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\linewidth]{qrr_didt.png}
-        \caption{Carga de recuperación en reversa del diode como función de la tasa de cambio de la corriente directa del diodo}
+        \caption{Carga de recuperación en reversa del diodo como función de la tasa de cambio de la corriente directa del diodo}
         \label{fig:qrr25}
     \end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Parámetros del circuito}
+Antes de obtener las pérdidas de potencia por conducción y conmutación en los semiconductores, es necesario establecer los parámetros
+con los que operará el circuito, los cuales incluyen la frecuencia de conmutación (que modifica las pérdidas por conmutación y el tamaño de los componentes), 
+el valor de inductancia en la bobina (que afecta el rizado de la corriente), y el valor de la capacitancia (que influye en el rizado de la tensión de salida).
+
+\setlength{\parskip}{1em}
+
+Primeramente, para poder operar con una corriente continua, el valor mínimo de inductancia que se necesita de acuerdo con la frecuencia de 
+conmutación, está dado según la siguiente ecuación \cite{hart2011power}.
+
+\begin{equation}
+    L_{min} = \frac{(1 - D) \cdot R}{2 \cdot f_{sw}}
+\end{equation}
+
+Que también se podría obtener partiendo del análisis de que el rizado de la corriente no debe de superar el doble
+del valor de la corriente nominal. Además, en los requerimientos para el diseño, se solicita que el rizado de corriente
+no exceda el $30 \%$ de la corriente nominal, que según se calculó son aproximadamente $8.33~\mathrm{A}$, este rizado 
+se puede calcular mediante la siguiente ecuación \cite{hart2011power}.
+
+\begin{equation}
+    \Delta I_L = \frac{V_{o} \cdot (1 - D)}{L \cdot f_{sw}}
+\end{equation}
+
+A partir de lo anterior y considerando el rango de frecuencias permitido $(10 \text{ kHz} \leq f_{sw} \leq 50 \text{ kHz})$. Se
+analizaron los valores con una frecuencia de conmutación intermedia de $30~\mathrm{kHz}$, lo cual da un valor mínimo de inductancia de $L_{min} \approx 24~\mathrm{\mu H}$,
+con un rizado de corriente del $200~\%$ aproximadamente (para esa inductancia). Claramente es necesario aumentar el valor de la inductancia para disminuir el rizado, 
+sumado a esto es deseable también disminuir las pérdidas por conmutación.
+
+\setlength{\parskip}{1em}
+
+Con lo cual se decidió disminuir la frecuencia de conmutación a $20~\mathrm{kHz}$, lo que da un valor mínimo de inductancia de $L_{min} \approx 36~\mathrm{\mu H}$, a ese valor
+el rizado de corriente es del $200~\%$ igualmente. Para lo cual es necesario aumentar el valor de la inductancia, pensando en una aplicación real del circuito se puede utilizar
+un inductor de $1~\mathrm{mH}$, que genera un rizado de corriente de $600 ~\mathrm{mA}$, equivalentes al $7.2~\%$ de la corriente nominal.
+
+\setlength{\parskip}{1em}
+
+
+Finalmente, el rizado de tensión en la salida varía según el valor de la capacitancia de acuerdo con la siguiente
+ecuación \cite{hart2011power}.
+
+\begin{equation}
+    \Delta V_o = \frac{(1 - D) \cdot V_o}{8LC \cdot f_{sw}^2}
+    \label{eq:vo_ripple}
+\end{equation}
+
+Para una tensión de salida de $24~\mathrm{V}$, se podría considerar que un rizado $\Delta V_o \approx 0.5~\mathrm{V}$ o menor, es bastante bueno y refleja el $2.08~\%$ de la tensión nominal de salida.
+Según la ecuación \ref{eq:vo_ripple}, para lograr ese rizado de tensión, se debe de utilizar un capacitor de al menos $7.5 ~\mathrm{\mu F}$. Con lo cual, eligiendo un valor comercial y que
+logre disminuir aún más el rizado, se selecionó un capacitor de $22~\mathrm{\mu F}$, lo que da un rizado de tensión de aproximadamente $0.17~\mathrm{V}$, equivalentes al $0.71~\%$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Pérdidas de potencia en los semiconductores}
 
 
 
