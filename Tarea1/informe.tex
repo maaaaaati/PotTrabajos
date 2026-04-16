@@ -490,6 +490,57 @@ Este enfoque facilita una mejor aproximación del comportamiento real del dispos
 
 
 
+\subsubsection{Comparación y selección del disipador térmico}
+
+Para la selección del disipador se compararon tres candidatos de la misma familia comercial: 6380BG, 6381BG y 6382BG. La comparación dentro de una misma familia permite mantener consistencia en material, geometría base y criterio de especificación térmica, de modo que la diferencia principal entre las opciones corresponde al tamaño del disipador y, por tanto, a su capacidad de disipación térmica.
+
+El parámetro principal de selección fue la resistencia térmica disipador--ambiente $R_{\theta sa}$ en convección natural, ya que este valor determina la elevación de temperatura del disipador para una potencia disipada dada. Adicionalmente, se estimó la capacitancia térmica del disipador mediante
+
+\begin{equation}
+C_{th,sink} \approx m c_p
+\label{eq:cth_sink}
+\end{equation}
+
+donde $m$ es la masa del disipador y $c_p$ el calor específico del material. En este caso se consideró un disipador de aluminio, por lo que se adoptó $c_p \approx 900\ \text{J/(kg·K)}$. Debido a que los tres disipadores pertenecen a la misma familia y comparten la misma sección transversal, la masa de cada uno se estimó proporcionalmente con su longitud a partir del peso reportado para el modelo 6380BG.
+
+La Tabla~\ref{tab:comparacion_disipadores} resume los parámetros considerados para la comparación.
+
+\begin{table}[H]
+\centering
+\caption{Comparación de disipadores térmicos}
+\label{tab:comparacion_disipadores}
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Modelo} & \textbf{Length [mm]} & \boldmath{$R_{\theta sa}$} \textbf{[$^\circ$C/W]} & \textbf{Masa [g]} & \boldmath{$C_{th}$} \textbf{[J/K]} \\
+\hline
+6380BG & 25.4 & 6.8 & 19.4 & 17.5 \\
+\hline
+6381BG & 38.1 & 5.8 & 29.1 & 26.2 \\
+\hline
+6382BG & 50.8 & 4.2 & 38.8 & 34.9 \\
+\hline
+\end{tabular}
+\end{table}
+
+A partir de la comparación realizada, se seleccionó el disipador \textbf{6382BG}. Esta elección se justifica porque presenta la menor resistencia térmica de las tres opciones evaluadas, lo que proporciona la menor elevación de temperatura del disipador para la potencia total disipada por el sistema. Además, al ser el disipador de mayor tamaño dentro de la familia comparada, también presenta la mayor capacitancia térmica estimada, lo cual favorece una respuesta térmica más lenta frente a incrementos transitorios de potencia.
+
+Para el disipador seleccionado, la constante de tiempo térmica aproximada se estimó como
+
+\begin{equation}
+\tau_{sink}=R_{\theta sa}\,C_{th,sink}
+\label{eq:tau_sink}
+\end{equation}
+
+de donde, usando $R_{\theta sa}=4.2\ ^\circ\text{C/W}$ y $C_{th,sink}=34.9\ \text{J/K}$, se obtiene
+
+\begin{equation}
+\tau_{sink}\approx 146.6\ \text{s}
+\label{eq:tau_sink_value}
+\end{equation}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Parámetros del circuito}
