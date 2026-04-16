@@ -95,6 +95,8 @@ que sustentan lo realizado en este trabajo.
 \subsection{Convertidor Buck}
 El convertidor Buck es un convertidor DC-DC reductor que permite obtener un voltaje de salida menor al voltaje de entrada mediante el uso de un interruptor controlado (generalmente un MOSFET), un diodo, un inductor y un capacitor.
 
+\setlength{\parskip}{1em}
+
 Su principio de operación se basa en la conmutación periódica del interruptor, lo cual genera dos estados: conducción y apagado \cite{hart2011power}. En estado de conducción, el inductor almacena energía, mientras que en el estado de apagado, esta energía se transfiere a la carga.
 
 En régimen ideal y en conducción continua, la relación entre el voltaje de salida y el de entrada está dada por:
@@ -115,9 +117,23 @@ Las pérdidas por conducción ocurren cuando el dispositivo se encuentra en esta
 \end{equation}
 donde $I$ es la corriente que circula por el dispositivo \cite{kassakian1991principles}.
 
+\setlength{\parskip}{1em}
+
 \subsubsection{Perdidas por conmutación}
 Las pérdidas por conmutación se producen durante los intervalos de encendido y apagado del dispositivo, debido a la superposición de voltaje y corriente. Estas pérdidas dependen de la frecuencia de conmutación y de los tiempos de transición.
-\subsubsection{$R_{on}$ y su dependencia con la temperatura}
+
+\setlength{\parskip}{1em}
+
+Además, las pérdidas de potencia por conmutación, totales en un dispositivo. Están dadas según la siguiente ecuación.
+
+\begin{equation}
+        P_{sw} = (E_{on} + E_{off}) \cdot f_{sw} 
+\end{equation}
+
+En esta se contempla la variación de estas pérdidas con respecto a la frecuencia de conmutación.
+
+
+\subsection{$R_{on}$ y su dependencia con la temperatura}
 La resistencia $R_{on}$ de los MOSFETs depende fuertemente de la temperatura de la unión. A medida que la temperatura aumenta, la movilidad de los portadores disminuye, lo que incrementa el valor de $R_{on}$.
 
 Este comportamiento provoca un aumento en las pérdidas por conducción y puede generar un efecto de realimentación térmica si no se controla adecuadamente. Por ello, es fundamental considerar esta dependencia en el diseño térmico del sistema.
@@ -297,8 +313,13 @@ corresponde a la tensión de entrada al circuito, unos \emph{$48~\mathrm{V}$} en
 \subsection{Opciones para el MOSFET}
 
 Para el transistor MOSFET, se seleccionaron las siguientes tres alternativas a comparar. El trasistor
-IRF540N \cite{IRF540N_ds}, el IRFS7730 \cite{IRFS7730_ds} y el IRFS4410Z \cite{IRFS4410Z}. A continuación, 
-se muestra su información más relevante según sus hojas de datos. 
+IRF540N \cite{IRF540N_ds}, el IRFS7730 \cite{IRFS7730_ds} y el IRFS4410Z \cite{IRFS4410Z}. 
+
+\setlength{\parskip}{1em}
+
+Los tres son de la marca Infineon, en un encapsulado TO-220. Este fabricante proporciona hojas de datos con suficiente información para poder generar
+buenos modelos térmicos en PLECS, a diferencia de otros como Texas Instruments o STMicroelectronics, que ofrecen información limitada. 
+Esta es la razón principal por la que se eligió a este fabricante específicamente. 
 
 \begin{table}[H]
     \centering
@@ -327,22 +348,21 @@ se muestra su información más relevante según sus hojas de datos.
     \label{tab:mosfet_comparison}
 \end{table}
 
-De la tabla \ref{tab:mosfet_comparison}, se observa que los tres transistores cumplen con los requisitos de tensión y corriente
-analizados en la sección anterior. No obstante el IRF540N tiene una resistencia de conducción mucho más alta que los otros 
-dos, esto es algo bastante relevante que ubica a este transistor en una posición menos llamativa para ser utilizado, puesto que 
-presentaría pérdidas por conducción mayores.
+De la tabla \ref{tab:mosfet_comparison}, se observa que los tres transistores cumplen con los requisitos de tensión para esta
+implementación de un convertidor Buck; de igual manera, los tres soportan corrientes muy por encima del rizado de corriente en la bobina
+(asumiendo a este inferior al $30~\%$ de la corriente nominal).
 
 \setlength{\parskip}{1em}
 
-De los otros dos transistores, el que presenta un valor de $R_{DS(on)}$ más bajo es el IRFS7730, lo que se traduce en menores pérdidas por conducción.
-No obstante, este transistor tiene un valor de carga de puerta $Q_g$ mucho más alto que el IRFS4410Z, y sus tiempos de conmutación también son considerablemente más
-altos; además, si bien el límite de tensión $V_{DS,max}$ del IRFS7730 es de $75~\mathrm{V}$, lo cual es aceptable para esta aplicación, lo ideal sería poder contar
-con un margen mayor que le de más seguridad de operación al circuito, para que funcione sin problemas.
+Los precios de los transistores rondan entre los $\$~1.81$ para el IRF540N, $\$~3.78$ para el IRFS7730 y $\$~2.13$ para el IRFS4410Z. De los tres
+el más costoso es el IRFS7730 y dadas sus caracterísitcas no tiene ventajas muy significativas que afecten el funcionamiento del convertidor, en comparación
+con las otras dos alternativas.
 
 \setlength{\parskip}{1em}
 
-En base a lo mencionado, se elige al IRFS4410Z como el transistor MOSFET para esta aplicación, ya que presenta un valor de $R_{DS(on)}$ bajo, 
-tiempos de conmutación más rápidos y un límite de tensión $V_{DS,max}$ de $100~\mathrm{V}$, que permite una operación segura.
+Entre el IRF540N y el IRFB4410Z, se puede considerar utilizar el IRFB4410Z para disminuir las pérdidas por conducción al bajar la resistencia de encendido
+$R_{DS(on)}$, aunque se incremente un poco el valor de $Q_{g}$; lo cual, sería el motivo principal por el cual elegirlo, ya que en disipación de potencia 
+ambos transistores tienen rangos bastante buenos para la aplicación en el convertidor. 
 
 
     \subsubsection{Construcción del modelo térmico}
@@ -382,13 +402,26 @@ tiempos de conmutación más rápidos y un límite de tensión $V_{DS,max}$ de $
         \label{fig:Eon_Eoff}
     \end{figure}
 
-    Importante mencionar que estos cálculos se hacen en base a las condiciones de prueba del MOSFET mencionados en la hoja de datos, para
-    la conformación del modelo térmico del dispositivo. Las pérdidas por conmutación en el convertidor Buck se analizarán posteriormente y
-    se obtienen por medio de la siguiente ecuación \cite{InfineonMOSFETLosses2006}.
+    Los datos mostrados en la Figura \ref{fig:Eon_Eoff} están calculados para una temperatura de $25~^{\circ}\mathrm{C}$ únicamente, ya que el fabricante
+    no proporciona información para otro valor de temperatura en este caso. Así mismo, también están basados según las condiciones bajo las 
+    cuales se muestra la información en la hoja de datos. 
 
-    \begin{equation}
-        P_{sw} = (E_{on} + E_{off}) \cdot f_{sw} 
-    \end{equation}
+    \setlength{\parskip}{1em}
+
+    Luego, para el modelado de las pérdidas por conducción se introduce en PLECS la gráfica de $V_{DS}$ vs $I_{DS}$, obtenida directamente
+    de la hoja de datos, la cual contiene la siguiente informacion. 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{IDvsVDS_MOSFET.png}
+        \caption{Tensión $V_{DS}$ vs corriente $I_{DS}$ en el MOSFET}
+        \label{fig:VDS_vs_IDS}
+    \end{figure}
+
+    De la Figura \ref{fig:VDS_vs_IDS} se puede ver que para corrientes inferiores a los 10 A, es de esperar que las pérdidas por conducción en el MOSFET
+    sean bastante bajas debido a las características del dispositivo.
+
+    
 
 
 

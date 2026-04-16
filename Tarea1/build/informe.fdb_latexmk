@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/informe"] 1776215048.42331 "build/informe.bcf" "build/informe.bbl" "build/informe" 1776215414.40009 0
-  "build/informe.bcf" 1776215413 109052 7fc9b5ae4f8fd6762bac4e6d89d814bb "pdflatex"
+["biber build/informe"] 1776310340.3322 "build/informe.bcf" "build/informe.bbl" "build/informe" 1776310457.0131 0
+  "build/informe.bcf" 1776310456 108972 97bd044de68bf112afc0c1bd3705bb82 "pdflatex"
   "literatura.bib" 1776208594 2369 a4b2ec4a3260a6ac97befdfe219cd710 ""
   (generated)
   "build/informe.bbl"
   "build/informe.blg"
   (rewritten before read)
-["pdflatex"] 1776215409.63067 "c:/LaTex/Tra_Potencia/PotTrabajos/Tarea1/informe.tex" "build/informe.pdf" "informe" 1776215414.401 0
+["pdflatex"] 1776310451.81007 "c:/LaTex/Tra_Potencia/PotTrabajos/Tarea1/informe.tex" "build/informe.pdf" "informe" 1776310457.01417 0
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775330152 84158 d77284a6843bde1e4b9764f09fb2e89e ""
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1773891445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/pablo/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1773891449 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -280,19 +280,20 @@
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/pablo/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "build/informe.aux" 1776215413 12327 d551d3e5a21ba38d15443037216bd849 "pdflatex"
-  "build/informe.bbl" 1776215050 8299 0c92768f630cb7722edf999d4d8f6ce1 "biber build/informe"
-  "build/informe.out" 1776215413 6817 f9d085885256082c1ab0f6762b0df51d "pdflatex"
-  "build/informe.run.xml" 1776215413 2434 6f2c741eea78e69b8ddf003fef666404 "pdflatex"
-  "c:/LaTex/Tra_Potencia/PotTrabajos/Tarea1/informe.tex" 1776215403 35826 a01ca7f1cc79d39b28c7dbf45d95c174 ""
+  "build/informe.aux" 1776310456 12602 08224468a2faf2efe0d9ebd159f31ca1 "pdflatex"
+  "build/informe.bbl" 1776310343 8299 0c92768f630cb7722edf999d4d8f6ce1 "biber build/informe"
+  "build/informe.out" 1776310456 6807 96d0ad0ed37bdfa8348ed8e9ea01e020 "pdflatex"
+  "build/informe.run.xml" 1776310456 2434 6f2c741eea78e69b8ddf003fef666404 "pdflatex"
+  "c:/LaTex/Tra_Potencia/PotTrabajos/Tarea1/informe.tex" 1776310444 36901 38f62583087d0f3ebdfea303dd20c0c8 ""
   "fig/CGD1_CGD2.png" 1775784655 52308 82578f4d297d5528bcfeba126d9d1c98 ""
   "fig/CORRIENTEVOLLtaje.png" 1776011957 188463 8a5c4461aba11a0a3cd56ab2cd15d126 ""
   "fig/Eon_Eoff_chart.png" 1775866367 100625 46f1eada27764864e7514f13d5875be5 ""
+  "fig/IDvsVDS_MOSFET.png" 1776266189 107639 057e838ea1b8d9e8c2ed48afcd6fb6fd ""
   "fig/circuito_Cauer.tex" 1775519633 819 8244dba111ca3e58cb978b957c54c621 ""
   "fig/circuito_Foster.tex" 1775332018 759 5d22b03509199869a21248f11622e558 ""
   "fig/foster_cauer_compare.png" 1776208594 48161 22c92073a15040dc466c1b94f6614c97 ""
   "fig/qrr_didt.png" 1776011957 259016 b23c14da27c5212ac12d75838c84256b ""
-  "informe.tex" 1776215403 35826 a01ca7f1cc79d39b28c7dbf45d95c174 ""
+  "informe.tex" 1776310444 36901 38f62583087d0f3ebdfea303dd20c0c8 ""
   "instructivo.sty" 1774899685 9675 6e73d3f6dfa117e9424bf62a4f29314d ""
   (generated)
   "build/informe.aux"
