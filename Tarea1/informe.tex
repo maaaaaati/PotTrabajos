@@ -524,6 +524,8 @@ La Tabla~\ref{tab:comparacion_disipadores} resume los parámetros considerados p
 \end{table}
 
 A partir de la comparación realizada, se seleccionó el disipador \textbf{6382BG}. Esta elección se justifica porque presenta la menor resistencia térmica de las tres opciones evaluadas, lo que proporciona la menor elevación de temperatura del disipador para la potencia total disipada por el sistema. Además, al ser el disipador de mayor tamaño dentro de la familia comparada, también presenta la mayor capacitancia térmica estimada, lo cual favorece una respuesta térmica más lenta frente a incrementos transitorios de potencia.
+También desde el punto de vista de una posible implementación física, el disipador \textbf{6382BG} también puede considerarse un candidato favorable dentro de las opciones evaluadas, ya que su mayor longitud respecto a los modelos 6380BG y 6381BG ofrece una superficie de montaje más amplia para acomodar dos dispositivos sobre un mismo disipador compartido. Esta característica puede resultar ventajosa al ubicar simultáneamente el MOSFET y el diodo, además de facilitar una mayor separación entre componentes y un mejor aprovechamiento del área útil de disipación. No obstante, la validación definitiva de montaje físico requeriría contrastar las dimensiones mecánicas del disipador con los encapsulados y condiciones de fijación de ambos dispositivos.
+
 
 Para el disipador seleccionado, la constante de tiempo térmica aproximada se estimó como
 
@@ -538,7 +540,6 @@ de donde, usando $R_{\theta sa}=4.2\ ^\circ\text{C/W}$ y $C_{th,sink}=34.9\ \tex
 \tau_{sink}\approx 146.6\ \text{s}
 \label{eq:tau_sink_value}
 \end{equation}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -603,21 +604,75 @@ logre disminuir aún más el rizado, se selecionó un capacitor de $22~\mathrm{\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelado térmico}
+\subsubsection{Circuito térmico del sistema}
 
-\subsection{Circuito térmico del sistema}
+La Figura~\ref{fig:circuito_termico_completo} muestra el circuito térmico completo implementado en PLECS. En la parte superior se encuentra la rama correspondiente al MOSFET, mientras que en la parte inferior se encuentra la rama correspondiente al diodo. En ambos casos se utilizó una representación explícita en forma de red Cauer, obtenida a partir de la conversión previa del modelo Foster a Cauer. Esta elección resulta conveniente porque el modelo Cauer permite representar nodos térmicos físicos intermedios, como la juntura y la cápsula, y facilita la interconexión del dispositivo con la interfaz cápsula--disipador y con el disipador compartido.
 
-El circuito térmico completo del sistema se construye considerando el flujo de calor desde la unión del semiconductor hasta el ambiente. Para ello, se identifican tres tramos principales: unión--cápsula, cápsula--disipador y disipador--ambiente. Cada uno de estos tramos representa una oposición al flujo térmico, de forma análoga a como una resistencia eléctrica se opone al flujo de corriente.
-
-En este modelo, la potencia disipada por el MOSFET se interpreta como una fuente de calor, mientras que la temperatura corresponde a la variable de potencial térmico. Así, el calor generado en la unión del dispositivo se propaga hacia la cápsula, luego al disipador y finalmente al ambiente. La cadena térmica general puede expresarse mediante los nodos de temperatura $T_j$, $T_c$, $T_s$ y $T_a$, correspondientes a unión, cápsula, disipador y ambiente, respectivamente.
-
-De manera general, el incremento de temperatura entre la unión y el ambiente puede expresarse como
+En cada rama, la fuente de flujo térmico representa la potencia disipada por el semiconductor. Para el MOSFET se utilizó
 
 \begin{equation}
-T_j - T_a = P_{loss}\left(R_{\theta jc}+R_{\theta cs}+R_{\theta sa}\right)
-\label{eq:thermal_chain_general}
+P_m = 1.013\ \text{W}
 \end{equation}
 
-donde $P_{loss}$ es la potencia total disipada por el MOSFET, $R_{\theta jc}$ es la resistencia térmica unión--cápsula, $R_{\theta cs}$ es la resistencia térmica cápsula--disipador y $R_{\theta sa}$ es la resistencia térmica disipador--ambiente.
+mientras que para el diodo se utilizó
+
+\begin{equation}
+P_d = 6.287\ \text{W}.
+\end{equation}
+
+Cada una de estas fuentes inyecta calor en el nodo de juntura del dispositivo. A continuación, el calor atraviesa la red Cauer explícita, que modela el tramo unión--cápsula. Posteriormente, el flujo térmico pasa por la resistencia de interfaz cápsula--disipador \(R_{\theta cs}\), las cuales dependen de las hojas de datos del diodo y mosfet respectivamente, y finalmente llega al nodo común del disipador \(T_s\). Desde dicho nodo, el calor se transfiere hacia el ambiente a través de la resistencia térmica disipador--ambiente \(R_{\theta sa}\) y la capacitancia térmica del disipador \(C_{th,sink}\), con una temperatura ambiente fija impuesta mediante una fuente de temperatura constante.
+
+Dado que el MOSFET y el diodo comparten el mismo disipador, la potencia total que fluye hacia el ambiente corresponde a la suma de ambas disipaciones, es decir,
+
+\begin{equation}
+P_{tot} = P_m + P_d = 1.013 + 6.287 = 7.3\ \text{W}.
+\label{eq:ptot_termico}
+\end{equation}
+
+La justificación de emplear el modelo Cauer en esta etapa radica en que, además de conservar el comportamiento térmico equivalente del modelo Foster previamente obtenido, permite construir una red térmica físicamente interpretable y conectarla de forma directa con el resto del sistema térmico. Esto resulta especialmente útil en este caso, ya que ambos dispositivos comparten un mismo disipador y se requiere observar temperaturas en nodos específicos, como la juntura, la cápsula y el disipador. Por esta razón, tanto el modelo térmico del MOSFET como el del diodo fueron implementados finalmente en forma Cauer dentro del circuito térmico completo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{circuitotermico.png}
+    \caption{Circuito térmico completo implementado en PLECS. La rama superior corresponde al MOSFET y la rama inferior al diodo. Ambas ramas térmicas, modeladas mediante redes Cauer explícitas, convergen en un disipador compartido.}
+    \label{fig:circuito_termico_completo}
+\end{figure}
+
+Para validar el comportamiento del sistema, se midió la temperatura del nodo del disipador \(T_s\) respecto al ambiente. En régimen estacionario, el incremento de temperatura del disipador puede estimarse a partir de la potencia total disipada y de la resistencia térmica disipador--ambiente, según
+
+\begin{equation}
+\Delta T_s \approx P_{tot} R_{\theta sa}.
+\label{eq:deltaTs_teorica}
+\end{equation}
+
+Usando \(P_{tot}=7.3\ \text{W}\) y \(R_{\theta sa}=4.2\ ^\circ\text{C/W}\), se obtiene
+
+\begin{equation}
+\Delta T_s \approx 7.3 \times 4.2 = 30.66\ ^\circ\text{C}.
+\label{eq:deltaTs_num}
+\end{equation}
+
+La Figura~\ref{fig:Ts_total} presenta la respuesta simulada del nodo \(T_s\). A un tiempo de simulación de \(2000\ \text{s}\), la temperatura medida fue aproximadamente \(30.66\ ^\circ\text{C}\) sobre ambiente, valor que concuerda estrechamente con el valor esperado de \(30.66\ ^\circ\text{C}\). Esta concordancia confirma que la red térmica completa fue implementada correctamente y que el flujo de calor desde ambos dispositivos hacia el disipador compartido y posteriormente hacia el ambiente está siendo representado de manera consistente.
+
+Además, el comportamiento transitorio observado es coherente con la dinámica térmica del disipador. Considerando \(R_{\theta sa}=4.2\ ^\circ\text{C/W}\) y \(C_{th,sink}=34.9\ \text{J/K}\), la constante de tiempo térmica dominante del disipador es aproximadamente
+
+\begin{equation}
+\tau_{sink} \approx R_{\theta sa} C_{th,sink}
+= 4.2 \times 34.9
+\approx 146.6\ \text{s}.
+\end{equation}
+
+Por tanto, una simulación era suficiente con \(800\ \text{s}\) ya que está permite observar más de cinco constantes de tiempo térmicas, lo cual es suficiente para verificar que la respuesta se aproxima adecuadamente al régimen estacionario.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{resultadotermico.png}
+    \caption{Respuesta térmica simulada en el nodo del disipador \(T_s\) para el circuito térmico completo.}
+    \label{fig:Ts_total}
+\end{figure}
+
+
+
 
 
 \subsection{Modelo Foster del MOSFET}
@@ -796,6 +851,14 @@ El texto relacionado al apéndice va aquí.
         Estudiante del Instituto Tecnológico de Costa Rica (TEC) en la carrera de ingeniería electrónica.
         
         Correo: jeacamacho@estudiantec.cr
+\end{IEEEbiographynophoto}
+
+
+
+\begin{IEEEbiographynophoto}{Fernando J. Rodriguez}
+        Estudiante del Instituto Tecnológico de Costa Rica (TEC) en la carrera de ingeniería electrónica.
+        
+        Correo: 2021481922@estudiantec.cr
 \end{IEEEbiographynophoto}
 
 \begin{IEEEbiographynophoto}{Juan P. Elizondo}
