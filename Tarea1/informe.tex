@@ -49,7 +49,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Tarea 1: Circuitos Térmicos y el Convertidor Buck}
+\title{Tarea 1: Circuitos Térmicos}
 
 
 \author{Matías~A.~Camacho,~\IEEEmembership{estudiante,~TEC}
@@ -67,30 +67,21 @@
 \maketitle
 
 
-\begin{abstract}
-El resumen no debe de exceder de 150 palabras y debe establecer lo que fue hecho, como fue hecho, los resultados principales y su significado. No cite referencias en el resumen. No coloque ecuaciones, símbolos especiales o palabras claves.
-\end{abstract}
-
-% Se sugiere no más de cuatro palabras o frases cortas en orden alfabético, separadas por comas, que representen su reporte
-\begin{IEEEkeywords}
-Convertidor, ganancia, temperatura, eficiencia, potencia.
-\end{IEEEkeywords}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introducción}
 
-\IEEEPARstart{E}{n} esta sección se describe una introducción que le permita al lector 
-identificar aspectos importantes para la comprensión de la lectura del documento, una visión 
-relacionada al experimento y a los conocimientos científicos estudiados.
+\IEEEPARstart{E}{n} el diseño de sistemas electrónicos de potencia, el análisis térmico de los dispositivos semiconductores 
+es un aspecto fundamental para garantizar su correcto funcionamiento, eficiencia y confiabilidad. En este trabajo se aborda el 
+estudio de un convertidor DC-DC tipo Buck, considerando tanto sus condiciones de operación como las pérdidas de potencia asociadas 
+a sus componentes principales. A partir de ello, se desarrollan modelos térmicos equivalentes que permiten representar el flujo de 
+calor dentro del sistema, incluyendo la selección de dispositivos y disipadores adecuados. Finalmente, se realiza la validación del 
+comportamiento térmico mediante simulación y un análisis de la eficiencia del convertidor.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fundamentos Teóricos}
-Como parte de la ejecución de un buen diseño se presentan los principales fundamentos teóricos 
-que sustentan lo realizado en este trabajo.
 
 \subsection{Convertidor Buck}
 El convertidor Buck es un convertidor DC-DC reductor que permite obtener un voltaje de salida menor al voltaje de entrada mediante el uso de un interruptor controlado (generalmente un MOSFET), un diodo, un inductor y un capacitor.
@@ -104,8 +95,6 @@ En régimen ideal y en conducción continua, la relación entre el voltaje de sa
     V_o = D \cdot V_{in}
 \end{equation}
 donde $D$ es el ciclo de trabajo de la señal de control.
-
----
 
 \subsection{Pérdidas en semiconductores de potencia}
 Las pérdidas en dispositivos semiconductores de potencia determinan su eficiencia y comportamiento térmico. Estas se clasifican principalmente en pérdidas por conducción y por conmutación.
@@ -490,9 +479,9 @@ Este enfoque facilita una mejor aproximación del comportamiento real del dispos
 
 
 
-\subsubsection{Comparación y selección del disipador térmico}
+\subsection{Comparación y selección del disipador térmico}
 
-Para la selección del disipador se compararon tres candidatos de la misma familia comercial: 6380BG, 6381BG y 6382BG. La comparación dentro de una misma familia permite mantener consistencia en material, geometría base y criterio de especificación térmica, de modo que la diferencia principal entre las opciones corresponde al tamaño del disipador y, por tanto, a su capacidad de disipación térmica.
+Para la selección del disipador se compararon tres candidatos de la misma familia comercial: 6380BG \cite{Boyd_6380BG_ds}, 6381BG \cite{Boyd_6381BG_ds} y 6382BG \cite{Boyd_6382BG_ds}. La comparación dentro de una misma familia permite mantener consistencia en material, geometría base y criterio de especificación térmica, de modo que la diferencia principal entre las opciones corresponde al tamaño del disipador y, por tanto, a su capacidad de disipación térmica.
 
 El parámetro principal de selección fue la resistencia térmica disipador--ambiente $R_{\theta sa}$ en convección natural, ya que este valor determina la elevación de temperatura del disipador para una potencia disipada dada. Adicionalmente, se estimó la capacitancia térmica del disipador mediante
 
@@ -592,12 +581,6 @@ ecuación \cite{hart2011power}.
 Para una tensión de salida de $24~\mathrm{V}$, se podría considerar que un rizado $\Delta V_o \approx 0.5~\mathrm{V}$ o menor, es bastante bueno y refleja el $2.08~\%$ de la tensión nominal de salida.
 Según la ecuación \ref{eq:vo_ripple}, para lograr ese rizado de tensión, se debe de utilizar un capacitor de al menos $7.5 ~\mathrm{\mu F}$. Con lo cual, eligiendo un valor comercial y que
 logre disminuir aún más el rizado, se selecionó un capacitor de $22~\mathrm{\mu F}$, lo que da un rizado de tensión de aproximadamente $0.17~\mathrm{V}$, equivalentes al $0.71~\%$.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Pérdidas de potencia en los semiconductores}
 
 
 
@@ -810,10 +793,38 @@ La Figura~\ref{fig:foster_cauer_compare} muestra la comparación entre ambas res
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Validación térmica}
+Tras seleccionar el disipador para los semiconductores y establecer los parámetros del circuito,
+su análisis térmico permite comprobar si el diseño se ajusta a los requerimientos. Para este caso
+era necesario que la temperatura de juntura de los dispositivos no superara los $100~^\circ\mathrm{C}$.
 
-\subsection{Simulaciones térmicas}
+\subsection{Verificación de límites térmicos}
+Se construyeron las siguientes gráficas de acuerdo con los datos brindados en la simulación de PLECS, para
+el análisis en el estado estacionario. 
 
-\subsection{Cumplimiento de límites térmicos}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{TJ_MOSFET.png}
+    \caption{Comportamiento de la temperatura de juntura del MOSFET}
+    \label{fig:TJ_MOSFET}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{TJ_DIODO.png}
+    \caption{Comportamiento de la temperatura de juntura del diodo}
+    \label{fig:TJ_DIODO}
+\end{figure}
+
+En las gráficas se observan las variaciones en la temperatura de los semiconductores, esto de acuerdo 
+con las conmutaciones del MOSFET. Para el caso del MOSFET su temperatura promedio ronda los $56~^\circ\mathrm{C}$,
+mientras que en el diodo la temperatura ronda los $67~^\circ\mathrm{C}$. Por lo que el circuito junto con su disipador 
+seleccionado, cumplen con las restricciones de temperatura. 
+
+\setlength{\parskip}{1em}
+
+Adicionalmente, la temperatura en el disipador (ya en el estado estacionario), ronda los $54.8~^\circ\mathrm{C}$.
+
 
 
 
@@ -832,54 +843,9 @@ La Figura~\ref{fig:foster_cauer_compare} muestra la comparación entre ambas res
 Las conclusiones van aquí.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendices
-\section{Pendiente}
-El texto relacionado al apéndice va aquí.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \printbibliography
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Biografías de los autores}
-
-
-
- 
-\begin{IEEEbiographynophoto}{Matías A. Camacho}
-        Estudiante del Instituto Tecnológico de Costa Rica (TEC) en la carrera de ingeniería electrónica.
-        
-        Correo: jeacamacho@estudiantec.cr
-\end{IEEEbiographynophoto}
-
-
-
-\begin{IEEEbiographynophoto}{Fernando J. Rodriguez}
-        Estudiante del Instituto Tecnológico de Costa Rica (TEC) en la carrera de ingeniería electrónica.
-        
-        Correo: 2021481922@estudiantec.cr
-\end{IEEEbiographynophoto}
-
-\begin{IEEEbiographynophoto}{Juan P. Elizondo}
-        Realizó sus estudios de secundaria en el SNCCCR, sede UNA Región Brunca, y actualmente cursa la carrera de Ingeniería Electrónica en el Instituto Tecnológico de Costa Rica (TEC). 
-        
-        Fue estudiante de la Universidad de Costa Rica (UCR) durante el año 2022 y participó en programas de estudio en matemática en la Universidad Nacional (UNA) durante los años 2020 y 2021. 
-        
-        Cuenta con preparación y/o experiencia en áreas como:
-        \begin{itemize}
-            \item Arquitectura básica de redes, CISCO CCNA V7 (ITN), (2021).
-            \item Fundamentos de ciberseguridad, CISCO Systems, (2022).
-            \item Programa de tutorías estudiantiles, Tecnológico de Costa Rica, (2024).
-            \item Diseño de circuitos digitales, TEC (2025).
-        \end{itemize}
-        
-        Correo: juelizondo@estudiantec.cr
-\end{IEEEbiographynophoto}
-
-
-
-\vfill
 
 \end{document}
 
