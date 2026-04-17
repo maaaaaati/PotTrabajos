@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber informe"] 1776404724.52319 "informe.bcf" "informe.bbl" "informe" 1776404842.67115 0
-  "informe.bcf" 1776404842 108332 26065b23d14151322b2fbc6d5bfa6404 "pdflatex"
+["biber informe"] 1776404724.52319 "informe.bcf" "informe.bbl" "informe" 1776404963.85795 0
+  "informe.bcf" 1776404963 108332 26065b23d14151322b2fbc6d5bfa6404 "pdflatex"
   "literatura.bib" 1776394132 3413 0d0237c9a7ad8c376f7e0a943ee90e16 ""
   (generated)
   "informe.bbl"
   "informe.blg"
   (rewritten before read)
-["pdflatex"] 1776404838.18614 "c:/Users/matia/Downloads/Tarea1POT/Tarea1/informe.tex" "informe.pdf" "informe" 1776404842.67201 0
+["pdflatex"] 1776404959.05142 "c:/Users/matia/Downloads/Tarea1POT/Tarea1/informe.tex" "informe.pdf" "informe" 1776404963.85881 0
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1775790566 124346 55158e4ffab625ef9c37e66c4ee22ffe ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1741727281 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/matia/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1741727284 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -295,7 +295,7 @@
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/matia/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "c:/Users/matia/Downloads/Tarea1POT/Tarea1/informe.tex" 1776404832 44558 df735c5b7d252f62d44fe1c70c92302a ""
+  "c:/Users/matia/Downloads/Tarea1POT/Tarea1/informe.tex" 1776404958 44625 d16050ee6c5288ed693b53fa09e17264 ""
   "fig/CGD1_CGD2.png" 1775961975 52308 82578f4d297d5528bcfeba126d9d1c98 ""
   "fig/CORRIENTEVOLLtaje.png" 1775967424 188463 8a5c4461aba11a0a3cd56ab2cd15d126 ""
   "fig/ConductionLosses.png" 1776399864 79683 3eaf6544efbf398f306bd2775cac2bd1 ""
@@ -311,11 +311,11 @@
   "fig/losses_freq.png" 1776403091 15986 988ccb0c6da1e602b42ff6a7fc1b563f ""
   "fig/qrr_didt.png" 1775968268 259016 b23c14da27c5212ac12d75838c84256b ""
   "fig/resultadotermico.png" 1776394132 30748 c2d5823eebbd913ab304fe2e9931a0dd ""
-  "informe.aux" 1776404842 16412 27c5397a49dcb91eaffac7bdb7c6ba7c "pdflatex"
+  "informe.aux" 1776404963 16412 27c5397a49dcb91eaffac7bdb7c6ba7c "pdflatex"
   "informe.bbl" 1776404727 9168 43ea90ffc091fe20606c3c21ec02885a "biber informe"
-  "informe.out" 1776404842 6104 d8aa1fba8275841c59a41650336e5716 "pdflatex"
-  "informe.run.xml" 1776404842 2434 6f2c741eea78e69b8ddf003fef666404 "pdflatex"
-  "informe.tex" 1776404832 44558 df735c5b7d252f62d44fe1c70c92302a ""
+  "informe.out" 1776404963 6104 d8aa1fba8275841c59a41650336e5716 "pdflatex"
+  "informe.run.xml" 1776404963 2434 6f2c741eea78e69b8ddf003fef666404 "pdflatex"
+  "informe.tex" 1776404958 44625 d16050ee6c5288ed693b53fa09e17264 ""
   "instructivo.sty" 1774648931 9945 6e73d3f6dfa117e9424bf62a4f29314d ""
   (generated)
   "informe.aux"
