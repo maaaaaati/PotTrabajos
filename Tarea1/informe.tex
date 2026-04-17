@@ -84,49 +84,23 @@ comportamiento térmico mediante simulación y un análisis de la eficiencia del
 \section{Fundamentos Teóricos}
 
 \subsection{Convertidor Buck}
-El convertidor Buck es un convertidor DC-DC reductor que permite obtener un voltaje de salida menor al voltaje de entrada mediante el uso de un interruptor controlado (generalmente un MOSFET), un diodo, un inductor y un capacitor.
-
-\setlength{\parskip}{1em}
-
-Su principio de operación se basa en la conmutación periódica del interruptor, lo cual genera dos estados: conducción y apagado \cite{hart2011power}. En estado de conducción, el inductor almacena energía, mientras que en el estado de apagado, esta energía se transfiere a la carga.
-
-En régimen ideal y en conducción continua, la relación entre el voltaje de salida y el de entrada está dada por:
+El convertidor Buck es un convertidor DC-DC reductor que opera mediante la conmutación periódica de un MOSFET, generando dos estados: conducción y apagado \cite{hart2011power}. En conducción continua:
 \begin{equation}
     V_o = D \cdot V_{in}
 \end{equation}
-donde $D$ es el ciclo de trabajo de la señal de control.
 
 \subsection{Pérdidas en semiconductores de potencia}
-Las pérdidas en dispositivos semiconductores de potencia determinan su eficiencia y comportamiento térmico. Estas se clasifican principalmente en pérdidas por conducción y por conmutación.
-
-\subsubsection{Perdidas por conducción}
-Las pérdidas por conducción ocurren cuando el dispositivo se encuentra en estado ON. En el caso de un MOSFET, estas pérdidas están asociadas a su resistencia de encendido $R_{on}$ y se pueden expresar como:
+Las pérdidas se clasifican en conducción y conmutación. Las de conducción ocurren en estado ON \cite{kassakian1991principles}:
 \begin{equation}
     P_{cond} = I^2 \cdot R_{on}
 \end{equation}
-donde $I$ es la corriente que circula por el dispositivo \cite{kassakian1991principles}.
-
-\setlength{\parskip}{1em}
-
-\subsubsection{Perdidas por conmutación}
-Las pérdidas por conmutación se producen durante los intervalos de encendido y apagado del dispositivo, debido a la superposición de voltaje y corriente. Estas pérdidas dependen de la frecuencia de conmutación y de los tiempos de transición.
-
-\setlength{\parskip}{1em}
-
-Además, las pérdidas de potencia por conmutación, totales en un dispositivo. Están dadas según la siguiente ecuación.
-
+Las de conmutación dependen de la frecuencia y los tiempos de transición:
 \begin{equation}
-        P_{sw} = (E_{on} + E_{off}) \cdot f_{sw} 
+    P_{sw} = (E_{on} + E_{off}) \cdot f_{sw} 
 \end{equation}
 
-En esta se contempla la variación de estas pérdidas con respecto a la frecuencia de conmutación.
-
-
 \subsection{$R_{on}$ y su dependencia con la temperatura}
-La resistencia $R_{on}$ de los MOSFETs depende fuertemente de la temperatura de la unión. A medida que la temperatura aumenta, la movilidad de los portadores disminuye, lo que incrementa el valor de $R_{on}$.
-
-Este comportamiento provoca un aumento en las pérdidas por conducción y puede generar un efecto de realimentación térmica si no se controla adecuadamente. Por ello, es fundamental considerar esta dependencia en el diseño térmico del sistema.
-
+Al aumentar la temperatura de juntura, la movilidad de portadores disminuye, incrementando $R_{on}$ y las pérdidas por conducción, pudiendo generar realimentación térmica si no se controla.
 \subsection{Modelos térmicos}
     El comportamiento térmico de un semiconductor se puede representar
     mediante un circuito eléctrico equivalente (circuito térmico).
@@ -343,9 +317,7 @@ implementación de un convertidor Buck; de igual manera, los tres soportan corri
 
 \setlength{\parskip}{1em}
 
-Los precios de los transistores rondan entre los $\$~1.81$ para el IRF540N, $\$~3.78$ para el IRFS7730 y $\$~2.13$ para el IRFS4410Z. De los tres
-el más costoso es el IRFS7730 y dadas sus caracterísitcas no tiene ventajas muy significativas que afecten el funcionamiento del convertidor, en comparación
-con las otras dos alternativas.
+Los precios rondan \$~1.81 para el IRF540N, \$~3.78 para el IRFS7730 y \$~2.13 para el IRFS4410Z. El IRFS7730 es el más costoso sin ventajas significativas frente a las otras alternativas. Se seleccionó el IRFB4410Z por su menor $R_{DS(on)}$, que reduce las pérdidas por conducción.
 
 \setlength{\parskip}{1em}
 
@@ -512,10 +484,7 @@ La Tabla~\ref{tab:comparacion_disipadores} resume los parámetros considerados p
 \end{tabular}
 \end{table}
 
-A partir de la comparación realizada, se seleccionó el disipador \textbf{6382BG}. Esta elección se justifica porque presenta la menor resistencia térmica de las tres opciones evaluadas, lo que proporciona la menor elevación de temperatura del disipador para la potencia total disipada por el sistema. Además, al ser el disipador de mayor tamaño dentro de la familia comparada, también presenta la mayor capacitancia térmica estimada, lo cual favorece una respuesta térmica más lenta frente a incrementos transitorios de potencia.
-También desde el punto de vista de una posible implementación física, el disipador \textbf{6382BG} también puede considerarse un candidato favorable dentro de las opciones evaluadas, ya que su mayor longitud respecto a los modelos 6380BG y 6381BG ofrece una superficie de montaje más amplia para acomodar dos dispositivos sobre un mismo disipador compartido. Esta característica puede resultar ventajosa al ubicar simultáneamente el MOSFET y el diodo, además de facilitar una mayor separación entre componentes y un mejor aprovechamiento del área útil de disipación. No obstante, la validación definitiva de montaje físico requeriría contrastar las dimensiones mecánicas del disipador con los encapsulados y condiciones de fijación de ambos dispositivos.
-
-
+Se seleccionó el disipador \textbf{6382BG} por presentar la menor resistencia térmica y mayor capacitancia térmica de las tres opciones, lo que favorece menor elevación de temperatura y respuesta más lenta ante transitorios. Su mayor longitud también facilita el montaje simultáneo del MOSFET y el diodo sobre un disipador compartido.
 Para el disipador seleccionado, la constante de tiempo térmica aproximada se estimó como
 
 \begin{equation}
@@ -830,17 +799,59 @@ Adicionalmente, la temperatura en el disipador (ya en el estado estacionario), r
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Pérdidas y eficiencia}
+\section{Análisis de pérdidas y eficiencia}
 
 
+\subsubsection{Pérdidas por Conducción y Conmutación}
 
+
+La Figura~\ref{fig:conduction} y la Figura~\ref{fig:switching} muestran las pérdidas por conducción y conmutación del convertidor operando a 30~kHz. Las pérdidas por conmutación presentan un comportamiento pulsado asociado a cada transición del MOSFET, mientras que las pérdidas por conducción reflejan la disipación continua durante el intervalo de conducción.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ConductionLosses.png}
+    \caption{Pérdidas por conducción a 30~kHz.}
+    \label{fig:conduction}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{SwitchingLosses.png}
+    \caption{Pérdidas por conmutación a 30~kHz.}
+    \label{fig:switching}
+\end{figure}
+
+\subsubsection{Eficiencia vs Frecuencia}
+
+La Figura~\ref{fig:losses_freq} presenta la eficiencia del convertidor en el rango de 10~kHz a 50~kHz, calculada como:
+
+\begin{equation}
+    \eta = \frac{P_{in} - P_{losses}}{P_{in}} \times 100\%
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{losses_freq.png}
+    \caption{Pérdidas del MOSFET (plot de arriba) y diodo (plot de abajo) vs frecuencia de conmutación (de 10 kHz a 50 kHz, mayor frequencia mayor valor de pérdida).}
+    \label{fig:losses_freq}
+\end{figure}
+
+\subsubsection{Discusión}
+
+\textbf{1. Fenómeno dominante:} Las pérdidas por conmutación dominan sobre las de conducción, incrementándose con la frecuencia mientras las pérdidas por conducción se mantienen relativamente constantes.
+
+\textbf{2. Limitante térmica:} La temperatura de unión del diodo D1 es la principal limitante térmica, alcanzando los valores más elevados en régimen permanente.
+
+\textbf{3. Efecto de la frecuencia:} A mayor frecuencia de conmutación, las pérdidas por conmutación crecen, degradando la eficiencia y elevando la temperatura de los componentes semiconductores.
+
+\textbf{4. Compromisos identificados:} Frecuencias más altas reducen el tamaño de los componentes pasivos pero incrementan las pérdidas térmicas y reducen la eficiencia, constituyendo el principal trade-off del diseño.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusiones}
-Las conclusiones van aquí.
+El diseño del convertidor Buck con modelo térmico permitió verificar que los semiconductores seleccionados operan dentro de los límites térmicos establecidos, con temperaturas de juntura de 56~°C para el MOSFET y 67~°C para el diodo, ambas por debajo del límite de 100~°C. El análisis de pérdidas confirmó que las pérdidas por conmutación dominan sobre las de conducción y se incrementan con la frecuencia, lo que reduce la eficiencia del convertidor y eleva las temperaturas del sistema, constituyendo el principal trade-off del diseño entre tamaño de componentes pasivos y desempeño térmico.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
